@@ -1,6 +1,7 @@
 # Summary
 
 -----------
+[Markdown Syntax](markdown.md)
 [Rust Documentation](README.md)
 - [Command Line Tool](cli/README.md)
     - [init](cli/init.md)
@@ -23,10 +24,10 @@
 ---------
 - [Embedded und Hardware](embedded/index.md)
 - [Boards](boards/index.md)
-    - [NUCLEO-F042K6](boards/nucleo-f042k6.md)
-    - [NUCLEO-F103RB](boards/nucleo-f103rb.md)
-    - [STM32F4DISCOVERY](boards/stm32f4discovery.md)
-    - [STM32F429DISCOVERY](boards/stm32f429discovery.md)
+    - [NUCLEO-F042K6](boards/nucleo-f042k6.md)
+    - [NUCLEO-F103RB](boards/nucleo-f103rb.md)
+    - [STM32F4DISCOVERY](boards/stm32f4discovery.md)
+    - [STM32F429DISCOVERY](boards/stm32f429discovery.md)
 -----------
 - [Regelungstechnik](regelungstechnik/info.md)
 - [Robotics](robotics/index.md)
