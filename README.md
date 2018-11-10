@@ -71,3 +71,15 @@ wasm-pack test --headless --firefox
 ```
 wasm-pack publish
 ```
+
+[npm-image]: https://img.shields.io/npm/v/koa.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/koa
+[travis-image]: https://img.shields.io/travis/koajs/koa/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/koajs/koa
+[coveralls-image]: https://img.shields.io/codecov/c/github/koajs/koa.svg?style=flat-square
+[coveralls-url]: https://codecov.io/github/koajs/koa?branch=master
+[backers-image]: https://opencollective.com/koajs/backers/badge.svg?style=flat-square
+[sponsors-image]: https://opencollective.com/koajs/sponsors/badge.svg?style=flat-square
+[gitter-image]: https://img.shields.io/gitter/room/koajs/koa.svg?style=flat-square
+[gitter-url]: https://gitter.im/koajs/koa?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[#koajs]: https://webchat.freenode.net/?channels=#koajs
