@@ -37,8 +37,7 @@ matrix:
       rust: nightly
       before_script:
       # - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
-      - (test -x $HOME/.cargo/bin/mdbook-mosta || cargo install --git https://github.com/asmolkov/mdbook-mosta)
-      
+      - (test -x $HOME/.cargo/bin/mdbook-mosta || cargo install --git https://github.com/smolkov/mdbook-mosta.git)
       script:
       - (cd docs && $HOME/.cargo/bin/mdbook-mosta build)
       deploy:
