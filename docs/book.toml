@@ -1,0 +1,35 @@
+[book]
+title = " Project Documentation"
+description = "Create book from markdown files."
+authors = ["Sascha Smolkov"]
+src="src"
+
+[output.html]
+additional-css = ["mermaid.css"]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+# [output.html.playpen]
+# editable = true
+
+# [output.html.search]
+# limit-results = 20
+# use-boolean-and = true
+# boost-title = 2
+# boost-hierarchy = 2
+# boost-paragraph = 1
+# expand = true
+# heading-split-level = 2
+
+
+# [output.linkcheck]
+# Should we check links on the internet? Enabling this option adds a
+# non-negligible performance impact
+# follow-web-links = false
+
+# Are we allowed to link to files outside of the book's root directory? This
+# may help prevent linking to sensitive files (e.g. "../../../../etc/shadow")
+# traverse-parent-directories = false
+
+# If necessary, you can exclude one or more web links from being checked with
+# a list of regular expressions
+# exclude = [ "google\\.com" ]

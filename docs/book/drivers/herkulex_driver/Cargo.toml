@@ -1,0 +1,10 @@
+[package]
+authors = ["Paul Florence <florencepaul@hotmail.fr>"]
+edition = "2018"
+name = "herkulex_manager"
+version = "0.2.0"
+[dependencies]
+clap = "2.32.0"
+cursive = "0.9.1"
+drs-0x01 = "0.1.7"
+serialport = "3.0.0"

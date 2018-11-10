@@ -1,0 +1,9 @@
+[source.crates-io]
+replace-with = "vendor+crates-io"
+
+[source."vendor+crates-io"]
+directory = "/home/sascha/code/pr-quicktocuv/vendor/registry-40351f815f426200"
+
+[cargo-new]
+name="Sascha Smolkov"
+email = "sascha.smolkov@gmail.com"

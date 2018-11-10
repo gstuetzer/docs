@@ -1,0 +1,28 @@
+# ☑ TODO
+
+- [X] Actuelle Stand Embedded electronic.
+- [X] Actuelle Stand Rust
+- [X] Skitzze technische Dokumentation.
+- [X] Skitzze Handbuch.
+- [X] Relevante Resourcen.
+- [ ] RFC-Process bei LAR
+- [ ] Monitoring Station
+- [ ] uvtc- tc mehode fuer UV
+- [ ] `can4linux` CAN-Open protocol driver
+- [ ] `incostatic-panel-pc` Panel PC von Incostatic
+- [ ] `dashboard` station Wasm daschboard
+- [ ] `docker` containern. oder `kubernetes` eine bessere Alternative fuer uns. 
+- [ ] `edinburgh` sensor
+- [ ] `aide` sensor
+- [ ] Doppelmotornode3
+- [ ] AnalogNode
+- [ ] DigitalNode
+- [ ] AnalogerweiterungsNode
+- [ ] Sysinfo PC uberwachung
+- [ ] Working Group tools `wg`  
+- [ ] Techniche Dokumentation.
+- [ ] Handbuch
+- [ ] Project an RFC Standart angleichen
+- [ ] Motivation, Summary vervollständigen
+- [ ] `gtk-3` Stylen
+- [ ] Color Theme

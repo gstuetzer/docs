@@ -1,0 +1,65 @@
+[package]
+name = "rfc-uv"
+version = "0.1.0"
+authors = ["Sascha Smolkov <sascha.smolkov@gmail.com>"]
+description = "RFC Procedure Entwicklungsproject UV-2.0"
+# Ignore all files so we can explicitly whitelist what we want to be included in
+# the package
+exclude = ["*"]
+include = ["/README.md", "LICENSE", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md",
+  "CHANGELOG.md", "src/**/*.rs", "examples/**/*.rs", "examples/**/*.txt",
+  "tests/**/*.rs", "Cargo.toml", ".rustfmt.toml", "rust-toolchain"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+cfg-if = "0.1.2"
+wasm-bindgen = "0.2"
+
+# The `console_error_panic_hook` crate provides better debugging of panics by
+# logging them with `console.error`. This is great for development, but requires
+# all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
+# code size when deploying.
+console_error_panic_hook = { version = "0.1.1", optional = true }
+
+# `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
+# compared to the default allocator's ~10K. It is slower than the default
+# allocator, however.
+#
+# Unfortunately, `wee_alloc` requires nightly Rust when targeting wasm for now.
+# wee_alloc = { version = "0.4.2", optional = true }
+# derive-new = "0.5.5"
+# cssparser = "0.24.1"
+# strum = "0.11.0"
+# strum_macros = "0.11.0"
+# config = "0.9.1"
+# ripgrep = "0.10.0"
+# cargo-vendor = "0.1.17"
+# cargo-local-registry = "0.1.5"
+# cargo = "0.30.0"
+# mdbook = "0.2.1"
+# docopt = "0.8"
+# skeptic = "0.13"
+# nalgebra = "0.16"
+# ncollide2d = "0.17"
+# nphysics2d = "0.9"
+# git2 = "0.7.5"
+# nom = "4.1.1"
+# svgbob = "0.4.1"
+# error-chain = "0.12.0"
+# csv = "1.0.2"
+# log = "0.4.5"
+# herbie-lint = "1.0.7"
+# liner = "0.4.4"
+# dat = "0.0.0"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.2"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"

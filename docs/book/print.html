@@ -1,0 +1,2079 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title> Project Documentation</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Create book from markdown files.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fontawesome/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="mermaid.css">
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="spacer"></li><li class="affix"><a href="index.html">Rust Documentation</a></li><li><a href="cli/index.html"><strong aria-hidden="true">1.</strong> Command Line Tool</a></li><li><ol class="section"><li><a href="cli/init.html"><strong aria-hidden="true">1.1.</strong> init</a></li><li><a href="cli/build.html"><strong aria-hidden="true">1.2.</strong> build</a></li><li><a href="cli/watch.html"><strong aria-hidden="true">1.3.</strong> watch</a></li><li><a href="cli/serve.html"><strong aria-hidden="true">1.4.</strong> serve</a></li><li><a href="cli/clean.html"><strong aria-hidden="true">1.5.</strong> clean</a></li></ol></li><li><a href="format/index.html"><strong aria-hidden="true">2.</strong> Format</a></li><li><a href="format/summary.html"><strong aria-hidden="true">3.</strong> SUMMARY.md</a></li><li><ol class="section"><li><a href="format/theme/index.html"><strong aria-hidden="true">3.1.</strong> Theme</a></li><li><ol class="section"><li><a href="format/theme/index-hbs.html"><strong aria-hidden="true">3.1.1.</strong> index.hbs</a></li><li><a href="format/theme/syntax-highlighting.html"><strong aria-hidden="true">3.1.2.</strong> Syntax highlighting</a></li><li><a href="format/theme/editor.html"><strong aria-hidden="true">3.1.3.</strong> Editor</a></li></ol></li><li><a href="format/mathjax.html"><strong aria-hidden="true">3.2.</strong> MathJax Support</a></li><li><a href="format/mdbook.html"><strong aria-hidden="true">3.3.</strong> mdBook specific features</a></li><li><a href="continuous-integration.html"><strong aria-hidden="true">3.4.</strong> Continuous Integration</a></li><li><a href="for_developers/index.html"><strong aria-hidden="true">3.5.</strong> For Developers</a></li><li><a href="for_developers/preprocessors.html"><strong aria-hidden="true">3.6.</strong> Preprocessors</a></li><li><a href="for_developers/backends.html"><strong aria-hidden="true">3.7.</strong> Alternate Backends</a></li><li class="spacer"></li></ol></li><li><a href="embedded/index.html"><strong aria-hidden="true">4.</strong> Embedded und Hardware</a></li><li><a href="boards/index.html"><strong aria-hidden="true">5.</strong> Boards</a></li><li><ol class="section"><li><a href="boards/nucleo-f042k6.html"><strong aria-hidden="true">5.1.</strong> NUCLEO-F042K6</a></li><li><a href="boards/nucleo-f103rb.html"><strong aria-hidden="true">5.2.</strong> NUCLEO-F103RB</a></li><li><a href="boards/stm32f4discovery.html"><strong aria-hidden="true">5.3.</strong> STM32F4DISCOVERY</a></li><li><a href="boards/stm32f429discovery.html"><strong aria-hidden="true">5.4.</strong> STM32F429DISCOVERY</a></li><li class="spacer"></li></ol></li><li><a href="regelungstechnik/info.html"><strong aria-hidden="true">6.</strong> Regelungstechnik</a></li><li><a href="robotics/index.html"><strong aria-hidden="true">7.</strong> Robotics</a></li><li class="spacer"></li><li><a href="umweltanalytic/index.html"><strong aria-hidden="true">8.</strong> Umweltanalutik</a></li><li><a href="git/cheatsheets.html"><strong aria-hidden="true">9.</strong> Git cheatsheets</a></li><li class="affix"><a href="rfc/rfc.html">RFC-Process Skitzze und Infos</a></li><li class="affix"><a href="motivation.html">Summary</a></li><li class="affix"><a href="zusammenfassung.html">Motivation</a></li><li class="affix"><a href="todo.html">Offene Punkte</a></li><li class="spacer"></li><li class="affix"><a href="misc/contributors.html">Contributors</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title"> Project Documentation</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#developements-documentation" id="developements-documentation"><h1>Developements documentation</h1></a>
+<p>Generiert mit der Hilfe <strong>mdBook</strong>
+is a command line tool and Rust crate to create books using Markdown
+files. It's very similar to Gitbook but written in
+<a href="http://www.rust-lang.org">Rust</a>.</p>
+<p>What you are reading serves as an example of the output of mdBook and at the
+same time as a high-level documentation.</p>
+<blockquote>
+<p><strong>💡 Tip:</strong> You can search through this book by clicking on the 🔍 icon at the
+top of the page, or by pressing the <code>s</code> key.</p>
+</blockquote>
+<p>mdBook is free and open source, you can find the source code on
+<a href="https://github.com/rust-lang-nursery/mdBook">GitHub</a>. Issues and feature
+requests can be posted on the <a href="https://github.com/rust-lang-nursery/mdBook/issues">GitHub issue tracker</a>.</p>
+<a class="header" href="#projekt-informationstafel" id="projekt-informationstafel"><h2>Projekt-Informationstafel</h2></a>
+<ul>
+<li><a href="">Hardware binding</a></li>
+<li><a href="">Analyzers library</a></li>
+</ul>
+<pre class="mermaid">graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+
+</pre>
+<pre class="mermaid">gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+
+</pre>
+<pre class="mermaid">gantt
+        dateFormat  YYYY-MM-DD
+        title Adding GANTT diagram functionality to mermaid
+        section A section
+        Completed task            :done,    des1, 2014-01-06,2014-01-08
+        Active task               :active,  des2, 2014-01-09, 3d
+        Future task               :         des3, after des2, 5d
+        Future task2               :         des4, after des3, 5d
+        section Critical tasks
+        Completed task in the critical line :crit, done, 2014-01-06,24h
+        Implement parser and jison          :crit, done, after des1, 2d
+        Create tests for parser             :crit, active, 3d
+        Future task in critical line        :crit, 5d
+        Create tests for renderer           :2d
+        Add to mermaid                      :1d
+
+
+</pre>
+<a class="header" href="#api-docs" id="api-docs"><h2>API docs</h2></a>
+<p>Alongside this book you can also read the <a href="https://docs.rs/mdbook/*/mdbook/">API docs</a> generated by Rustdoc if you would like
+to use mdBook as a crate or write a new renderer and need a more low-level
+overview.</p>
+<a class="header" href="#rust" id="rust"><h2>Rust</h2></a>
+<p><a href="https://www.rust-lang.org/en-US/">Rust</a> is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
+<a href="https://www.rust-lang.org/en-US/documentation.html">Rust Documentation</a>
+Learn more - Rust interesting books and Projects.</p>
+<ul>
+<li><a href="https://rust-lang-nursery.github.io/edition-guide/">Edition 2018</a></li>
+<li><a href="https://doc.rust-lang.org/cargo/index.html">Cargo</a> package manager.</li>
+<li><a href="https://docs.rs/toml/0.4.8/toml/">Konfigurierungssystem basiert auf TOML</a></li>
+<li><a href="https://github.com/RustCrypto">Cryptographic algorithms written in pure Rust</a></li>
+<li><a href="https://github.com/rust-osdev">Operating System Development in Rust</a></li>
+<li><a href="https://rust-embedded.github.io/bookshelf/">Rust Embedded books</a></li>
+</ul>
+<a class="header" href="#extra" id="extra"><h2>Extra</h2></a>
+<ul>
+<li><a href="https://github.com/Jermolene/TiddlyWiki5">Wikisystem TiddiWiki5</a></li>
+</ul>
+<a class="header" href="#web-css-html" id="web-css-html"><h2>Web Css Html</h2></a>
+<ul>
+<li><a href="https://devhints.io/">CSS cheatsheets</a>h</li>
+</ul>
+<a class="header" href="#command-line-tool" id="command-line-tool"><h1>Command Line Tool</h1></a>
+<p>mdBook can be used either as a command line tool or a <a href="https://crates.io/crates/mdbook">Rust
+crate</a>. Let's focus on the command line tool
+capabilities first.</p>
+<a class="header" href="#install-from-binaries" id="install-from-binaries"><h2>Install From Binaries</h2></a>
+<p>Precompiled binaries are provided for major platforms on a best-effort basis.
+Visit <a href="https://github.com/rust-lang-nursery/mdBook/releases">the releases page</a>
+to download the appropriate version for your platform.</p>
+<a class="header" href="#install-from-source" id="install-from-source"><h2>Install From Source</h2></a>
+<p>mdBook can also be installed from source</p>
+<a class="header" href="#pre-requisite" id="pre-requisite"><h3>Pre-requisite</h3></a>
+<p>mdBook is written in <strong><a href="https://www.rust-lang.org/">Rust</a></strong> and therefore needs
+to be compiled with <strong>Cargo</strong>. If you haven't already installed Rust, please go
+ahead and <a href="https://www.rust-lang.org/downloads.html">install it</a> now.</p>
+<a class="header" href="#install-cratesio-version" id="install-cratesio-version"><h3>Install Crates.io version</h3></a>
+<p>Installing mdBook is relatively easy if you already have Rust and Cargo
+installed. You just have to type this snippet in your terminal:</p>
+<pre><code class="language-bash">cargo install mdbook
+</code></pre>
+<p>This will fetch the source code for the latest release from
+<a href="https://crates.io/">Crates.io</a> and compile it. You will have to add Cargo's
+<code>bin</code> directory to your <code>PATH</code>.</p>
+<p>Run <code>mdbook help</code> in your terminal to verify if it works. Congratulations, you
+have installed mdBook!</p>
+<a class="header" href="#install-git-version" id="install-git-version"><h3>Install Git version</h3></a>
+<p>The <strong><a href="https://github.com/rust-lang-nursery/mdBook">git version</a></strong> contains all
+the latest bug-fixes and features, that will be released in the next version on
+<strong>Crates.io</strong>, if you can't wait until the next release. You can build the git
+version yourself. Open your terminal and navigate to the directory of you
+choice. We need to clone the git repository and then build it with Cargo.</p>
+<pre><code class="language-bash">git clone --depth=1 https://github.com/rust-lang-nursery/mdBook.git
+cd mdBook
+cargo build --release
+</code></pre>
+<p>The executable <code>mdbook</code> will be in the <code>./target/release</code> folder, this should be
+added to the path.</p>
+<a class="header" href="#the-init-command" id="the-init-command"><h1>The init command</h1></a>
+<p>There is some minimal boilerplate that is the same for every new book. It's for
+this purpose that mdBook includes an <code>init</code> command.</p>
+<p>The <code>init</code> command is used like this:</p>
+<pre><code class="language-bash">mdbook init
+</code></pre>
+<p>When using the <code>init</code> command for the first time, a couple of files will be set
+up for you:</p>
+<pre><code class="language-bash">book-test/
+├── book
+└── src
+    ├── chapter_1.md
+    └── SUMMARY.md
+</code></pre>
+<ul>
+<li>
+<p>The <code>src</code> directory is were you write your book in markdown. It contains all
+the source files, configuration files, etc.</p>
+</li>
+<li>
+<p>The <code>book</code> directory is where your book is rendered. All the output is ready
+to be uploaded to a server to be seen by your audience.</p>
+</li>
+<li>
+<p>The <code>SUMMARY.md</code> file is the most important file, it's the skeleton of your
+book and is discussed in more detail <a href="../format/summary.html">in another
+chapter</a></p>
+</li>
+</ul>
+<a class="header" href="#tip-generate-chapters-from-summarymd" id="tip-generate-chapters-from-summarymd"><h4>Tip: Generate chapters from SUMMARY.md</h4></a>
+<p>When a <code>SUMMARY.md</code> file already exists, the <code>init</code> command will first parse it
+and generate the missing files according to the paths used in the <code>SUMMARY.md</code>.
+This allows you to think and create the whole structure of your book and then
+let mdBook generate it for you.</p>
+<a class="header" href="#specify-a-directory" id="specify-a-directory"><h4>Specify a directory</h4></a>
+<p>The <code>init</code> command can take a directory as an argument to use as the book's root
+instead of the current working directory.</p>
+<pre><code class="language-bash">mdbook init path/to/book
+</code></pre>
+<a class="header" href="#a--theme" id="a--theme"><h4>--theme</h4></a>
+<p>When you use the <code>--theme</code> flag, the default theme will be copied into a
+directory called <code>theme</code> in your source directory so that you can modify it.</p>
+<p>The theme is selectively overwritten, this means that if you don't want to
+overwrite a specific file, just delete it and the default file will be used.</p>
+<a class="header" href="#the-build-command" id="the-build-command"><h1>The build command</h1></a>
+<p>The build command is used to render your book:</p>
+<pre><code class="language-bash">mdbook build
+</code></pre>
+<p>It will try to parse your <code>SUMMARY.md</code> file to understand the structure of your
+book and fetch the corresponding files.</p>
+<p>The rendered output will maintain the same directory structure as the source for
+convenience. Large books will therefore remain structured when rendered.</p>
+<a class="header" href="#specify-a-directory-1" id="specify-a-directory-1"><h4>Specify a directory</h4></a>
+<p>The <code>build</code> command can take a directory as an argument to use as the book's
+root instead of the current working directory.</p>
+<pre><code class="language-bash">mdbook build path/to/book
+</code></pre>
+<a class="header" href="#a--open" id="a--open"><h4>--open</h4></a>
+<p>When you use the <code>--open</code> (<code>-o</code>) flag, mdbook will open the rendered book in
+your default web browser after building it.</p>
+<a class="header" href="#a--dest-dir" id="a--dest-dir"><h4>--dest-dir</h4></a>
+<p>The <code>--dest-dir</code> (<code>-d</code>) option allows you to change the output directory for the
+book. If not specified it will default to the value of the <code>build.build-dir</code> key
+in <code>book.toml</code>, or to <code>./book</code> relative to the book's root directory.</p>
+<hr />
+<p><strong><em>Note:</em></strong> <em>Make sure to run the build command in the root directory and not in
+the source directory</em></p>
+<a class="header" href="#the-watch-command" id="the-watch-command"><h1>The watch command</h1></a>
+<p>The <code>watch</code> command is useful when you want your book to be rendered on every
+file change. You could repeatedly issue <code>mdbook build</code> every time a file is
+changed. But using <code>mdbook watch</code> once will watch your files and will trigger a
+build automatically whenever you modify a file.</p>
+<a class="header" href="#specify-a-directory-2" id="specify-a-directory-2"><h4>Specify a directory</h4></a>
+<p>The <code>watch</code> command can take a directory as an argument to use as the book's
+root instead of the current working directory.</p>
+<pre><code class="language-bash">mdbook watch path/to/book
+</code></pre>
+<a class="header" href="#a--open-1" id="a--open-1"><h4>--open</h4></a>
+<p>When you use the <code>--open</code> (<code>-o</code>) option, mdbook will open the rendered book in
+your default web browser.</p>
+<a class="header" href="#a--dest-dir-1" id="a--dest-dir-1"><h4>--dest-dir</h4></a>
+<p>The <code>--dest-dir</code> (<code>-d</code>) option allows you to change the output directory for the
+book. If not specified it will default to the value of the <code>build.build-dir</code> key
+in <code>book.toml</code>, or to <code>./book</code> relative to the book's root directory.</p>
+<a class="header" href="#the-serve-command" id="the-serve-command"><h1>The serve command</h1></a>
+<p>The serve command is used to preview a book by serving it over HTTP at
+<code>localhost:3000</code> by default. Additionally it watches the book's directory for
+changes, rebuilding the book and refreshing clients for each change. A websocket
+connection is used to trigger the client-side refresh.</p>
+<a class="header" href="#specify-a-directory-3" id="specify-a-directory-3"><h4>Specify a directory</h4></a>
+<p>The <code>serve</code> command can take a directory as an argument to use as the book's
+root instead of the current working directory.</p>
+<pre><code class="language-bash">mdbook serve path/to/book
+</code></pre>
+<a class="header" href="#server-options" id="server-options"><h4>Server options</h4></a>
+<p><code>serve</code> has four options: the HTTP port, the WebSocket port, the HTTP hostname
+to listen on, and the hostname for the browser to connect to for WebSockets.</p>
+<p>For example: suppose you have an nginx server for SSL termination which has a
+public address of 192.168.1.100 on port 80 and proxied that to 127.0.0.1 on port</p>
+<ol start="8000">
+<li>To run use the nginx proxy do:</li>
+</ol>
+<pre><code class="language-bash">mdbook serve path/to/book -p 8000 -n 127.0.0.1 --websocket-hostname 192.168.1.100
+</code></pre>
+<p>If you were to want live reloading for this you would need to proxy the
+websocket calls through nginx as well from <code>192.168.1.100:&lt;WS_PORT&gt;</code> to
+<code>127.0.0.1:&lt;WS_PORT&gt;</code>. The <code>-w</code> flag allows for the websocket port to be
+configured.</p>
+<a class="header" href="#a--open-2" id="a--open-2"><h4>--open</h4></a>
+<p>When you use the <code>--open</code> (<code>-o</code>) flag, mdbook will open the book in your your
+default web browser after starting the server.</p>
+<a class="header" href="#a--dest-dir-2" id="a--dest-dir-2"><h4>--dest-dir</h4></a>
+<p>The <code>--dest-dir</code> (<code>-d</code>) option allows you to change the output directory for the
+book. If not specified it will default to the value of the <code>build.build-dir</code> key
+in <code>book.toml</code>, or to <code>./book</code> relative to the book's root directory.</p>
+<hr />
+<p><strong><em>Note:</em></strong> <em>The <code>serve</code> command is for testing, and is not intended to be a
+complete HTTP server for a website.</em></p>
+<a class="header" href="#the-clean-command" id="the-clean-command"><h1>The clean command</h1></a>
+<p>The clean command is used to delete the generated book and any other build
+artifacts.</p>
+<pre><code class="language-bash">mdbook clean
+</code></pre>
+<a class="header" href="#specify-a-directory-4" id="specify-a-directory-4"><h4>Specify a directory</h4></a>
+<p>The <code>clean</code> command can take a directory as an argument to use as the book's
+root instead of the current working directory.</p>
+<pre><code class="language-bash">mdbook clean path/to/book
+</code></pre>
+<a class="header" href="#a--dest-dir-3" id="a--dest-dir-3"><h4>--dest-dir</h4></a>
+<p>The <code>--dest-dir</code> (<code>-d</code>) option allows you to override the book's output
+directory, which will be deleted by this command. If not specified it will
+default to the value of the <code>build.build-dir</code> key in <code>book.toml</code>, or to <code>./book</code>
+relative to the book's root directory.</p>
+<pre><code class="language-bash">mdbook clean --dest-dir=path/to/book
+</code></pre>
+<p><code>path/to/book</code> could be absolute or relative.</p>
+<a class="header" href="#format" id="format"><h1>Format</h1></a>
+<p>In this section you will learn how to:</p>
+<ul>
+<li>Structure your book correctly</li>
+<li>Format your <code>SUMMARY.md</code> file</li>
+<li>Configure your book using <code>book.toml</code></li>
+<li>Customize your theme</li>
+</ul>
+<a class="header" href="#summarymd" id="summarymd"><h1>SUMMARY.md</h1></a>
+<p>The summary file is used by mdBook to know what chapters to include, in what
+order they should appear, what their hierarchy is and where the source files
+are. Without this file, there is no book.</p>
+<p>Even though <code>SUMMARY.md</code> is a markdown file, the formatting is very strict to
+allow for easy parsing. Let's see how you should format your <code>SUMMARY.md</code> file.</p>
+<a class="header" href="#allowed-elements" id="allowed-elements"><h4>Allowed elements</h4></a>
+<ol>
+<li>
+<p><strong><em>Title</em></strong> It's common practice to begin with a title, generally <code
+class="language-markdown"># Summary</code>. But it is not mandatory, the
+parser just ignores it. So you can too if you feel like it.</p>
+</li>
+<li>
+<p><strong><em>Prefix Chapter</em></strong> Before the main numbered chapters you can add a couple
+of elements that will not be numbered. This is useful for forewords,
+introductions, etc. There are however some constraints. You can not nest
+prefix chapters, they should all be on the root level. And you can not add
+prefix chapters once you have added numbered chapters.</p>
+<pre><code class="language-markdown">[Title of prefix element](relative/path/to/markdown.md)
+</code></pre>
+</li>
+<li>
+<p><strong><em>Numbered Chapter</em></strong> Numbered chapters are the main content of the book,
+they will be numbered and can be nested, resulting in a nice hierarchy
+(chapters, sub-chapters, etc.)</p>
+<pre><code class="language-markdown">- [Title of the Chapter](relative/path/to/markdown.md)
+</code></pre>
+<p>You can either use <code>-</code> or <code>*</code> to indicate a numbered chapter.</p>
+</li>
+<li>
+<p><strong><em>Suffix Chapter</em></strong> After the numbered chapters you can add a couple of
+non-numbered chapters. They are the same as prefix chapters but come after
+the numbered chapters instead of before.</p>
+</li>
+</ol>
+<p>All other elements are unsupported and will be ignored at best or result in an
+error.</p>
+<a class="header" href="#theme" id="theme"><h1>Theme</h1></a>
+<p>The default renderer uses a <a href="http://handlebarsjs.com/">handlebars</a> template to
+render your markdown files and comes with a default theme included in the mdBook
+binary.</p>
+<p>The theme is totally customizable, you can selectively replace every file from
+the theme by your own by adding a <code>theme</code> directory next to <code>src</code> folder in your
+project root. Create a new file with the name of the file you want to override
+and now that file will be used instead of the default file.</p>
+<p>Here are the files you can override:</p>
+<ul>
+<li><strong><em>index.hbs</em></strong> is the handlebars template.</li>
+<li><strong><em>book.css</em></strong> is the style used in the output. If you want to change the
+design of your book, this is probably the file you want to modify. Sometimes
+in conjunction with <code>index.hbs</code> when you want to radically change the layout.</li>
+<li><strong><em>book.js</em></strong> is mostly used to add client side functionality, like hiding /
+un-hiding the sidebar, changing the theme, ...</li>
+<li><strong><em>highlight.js</em></strong> is the JavaScript that is used to highlight code snippets,
+you should not need to modify this.</li>
+<li><strong><em>highlight.css</em></strong> is the theme used for the code highlighting</li>
+<li><strong><em>favicon.png</em></strong> the favicon that will be used</li>
+</ul>
+<p>Generally, when you want to tweak the theme, you don't need to override all the
+files. If you only need changes in the stylesheet, there is no point in
+overriding all the other files. Because custom files take precedence over
+built-in ones, they will not get updated with new fixes / features.</p>
+<p><strong>Note:</strong> When you override a file, it is possible that you break some
+functionality. Therefore I recommend to use the file from the default theme as
+template and only add / modify what you need. You can copy the default theme
+into your source directory automatically by using <code>mdbook init --theme</code> just
+remove the files you don't want to override.</p>
+<a class="header" href="#indexhbs" id="indexhbs"><h1>index.hbs</h1></a>
+<p><code>index.hbs</code> is the handlebars template that is used to render the book. The
+markdown files are processed to html and then injected in that template.</p>
+<p>If you want to change the layout or style of your book, chances are that you
+will have to modify this template a little bit. Here is what you need to know.</p>
+<a class="header" href="#data" id="data"><h2>Data</h2></a>
+<p>A lot of data is exposed to the handlebars template with the &quot;context&quot;. In the
+handlebars template you can access this information by using</p>
+<pre><code class="language-handlebars">{{name_of_property}}
+</code></pre>
+<p>Here is a list of the properties that are exposed:</p>
+<ul>
+<li>
+<p><strong><em>language</em></strong> Language of the book in the form <code>en</code>. To use in <code
+class="language-html"><html lang="{{ language }}"></code> for example. At the
+moment it is hardcoded.</p>
+</li>
+<li>
+<p><strong><em>title</em></strong> Title of the book, as specified in <code>book.toml</code></p>
+</li>
+<li>
+<p><strong><em>chapter_title</em></strong> Title of the current chapter, as listed in <code>SUMMARY.md</code></p>
+</li>
+<li>
+<p><strong><em>path</em></strong> Relative path to the original markdown file from the source
+directory</p>
+</li>
+<li>
+<p><strong><em>content</em></strong> This is the rendered markdown.</p>
+</li>
+<li>
+<p><strong><em>path_to_root</em></strong> This is a path containing exclusively <code>../</code>'s that points
+to the root of the book from the current file. Since the original directory
+structure is maintained, it is useful to prepend relative links with this
+<code>path_to_root</code>.</p>
+</li>
+<li>
+<p><strong><em>chapters</em></strong> Is an array of dictionaries of the form</p>
+<pre><code class="language-json">{&quot;section&quot;: &quot;1.2.1&quot;, &quot;name&quot;: &quot;name of this chapter&quot;, &quot;path&quot;: &quot;dir/markdown.md&quot;}
+</code></pre>
+<p>containing all the chapters of the book. It is used for example to construct
+the table of contents (sidebar).</p>
+</li>
+</ul>
+<a class="header" href="#handlebars-helpers" id="handlebars-helpers"><h2>Handlebars Helpers</h2></a>
+<p>In addition to the properties you can access, there are some handlebars helpers
+at your disposal.</p>
+<a class="header" href="#a1-toc" id="a1-toc"><h3>1. toc</h3></a>
+<pre><code>The toc helper is used like this
+
+```handlebars
+{{#toc}}{{/toc}}
+```
+
+and outputs something that looks like this, depending on the structure of your book
+
+```html
+&lt;ul class=&quot;chapter&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;link/to/file.html&quot;&gt;Some chapter&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;ul class=&quot;section&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;link/to/other_file.html&quot;&gt;Some other Chapter&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+```
+
+If you would like to make a toc with another structure, you have access to the chapters property containing all the data.
+The only limitation at the moment is that you would have to do it with JavaScript instead of with a handlebars helper.
+
+```html
+&lt;script&gt;
+var chapters = {{chapters}};
+// Processing here
+&lt;/script&gt;
+```
+</code></pre>
+<a class="header" href="#a2-previous--next" id="a2-previous--next"><h3>2. previous / next</h3></a>
+<pre><code>The previous and next helpers expose a `link` and `name` property to the previous and next chapters.
+
+They are used like this
+
+```handlebars
+{{#previous}}
+    &lt;a href=&quot;{{link}}&quot; class=&quot;nav-chapters previous&quot;&gt;
+        &lt;i class=&quot;fa fa-angle-left&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+{{/previous}}
+```
+
+The inner html will only be rendered if the previous / next chapter exists.
+Of course the inner html can be changed to your liking.
+</code></pre>
+<hr />
+<p><em>If you would like other properties or helpers exposed, please <a href="https://github.com/rust-lang-nursery/mdBook/issues">create a new
+issue</a></em></p>
+<a class="header" href="#syntax-highlighting" id="syntax-highlighting"><h1>Syntax Highlighting</h1></a>
+<p>For syntax highlighting I use <a href="https://highlightjs.org">Highlight.js</a> with a
+custom theme.</p>
+<p>Automatic language detection has been turned off, so you will probably want to
+specify the programming language you use like this</p>
+<pre><code class="language-markdown">```rust
+fn main() {
+    // Some code
+}
+```</code>
+
+</pre>
+<a class="header" href="#custom-theme" id="custom-theme"><h2>Custom theme</h2></a>
+<p>Like the rest of the theme, the files used for syntax highlighting can be
+overridden with your own.</p>
+<ul>
+<li><strong><em>highlight.js</em></strong> normally you shouldn't have to overwrite this file, unless
+you want to use a more recent version.</li>
+<li><strong><em>highlight.css</em></strong> theme used by highlight.js for syntax highlighting.</li>
+</ul>
+<p>If you want to use another theme for <code>highlight.js</code> download it from their
+website, or make it yourself, rename it to <code>highlight.css</code> and put it in
+<code>src/theme</code> (or the equivalent if you changed your source folder)</p>
+<p>Now your theme will be used instead of the default theme.</p>
+<a class="header" href="#hiding-code-lines" id="hiding-code-lines"><h2>Hiding code lines</h2></a>
+<p>There is a feature in mdBook that lets you hide code lines by prepending them
+with a <code>#</code>.</p>
+<pre><code class="language-bash"># fn main() {
+    let x = 5;
+    let y = 6;
+
+    println!(&quot;{}&quot;, x + y);
+# }
+</code></pre>
+<p>Will render as</p>
+<pre><pre class="playpen"><code class="language-rust"># fn main() {
+    let x = 5;
+    let y = 7;
+
+    println!(&quot;{}&quot;, x + y);
+# }
+</code></pre></pre>
+<p><strong>At the moment, this only works for code examples that are annotated with
+<code>rust</code>. Because it would collide with semantics of some programming languages.
+In the future, we want to make this configurable through the <code>book.toml</code> so that
+everyone can benefit from it.</strong></p>
+<a class="header" href="#improve-default-theme" id="improve-default-theme"><h2>Improve default theme</h2></a>
+<p>If you think the default theme doesn't look quite right for a specific language,
+or could be improved. Feel free to <a href="https://github.com/rust-lang-nursery/mdBook/issues">submit a new
+issue</a> explaining what you
+have in mind and I will take a look at it.</p>
+<p>You could also create a pull-request with the proposed improvements.</p>
+<p>Overall the theme should be light and sober, without to many flashy colors.</p>
+<a class="header" href="#editor" id="editor"><h1>Editor</h1></a>
+<p>In addition to providing runnable code playpens, mdBook optionally allows them
+to be editable. In order to enable editable code blocks, the following needs to
+be added to the <strong><em>book.toml</em></strong>:</p>
+<pre><code class="language-toml">[output.html.playpen]
+editable = true
+</code></pre>
+<p>To make a specific block available for editing, the attribute <code>editable</code> needs
+to be added to it:</p>
+<pre><code class="language-markdown">```rust,editable
+fn main() {
+    let number = 5;
+    print!("{}", number);
+}
+```</code>
+
+</pre>
+<p>The above will result in this editable playpen:</p>
+<pre><pre class="playpen"><code class="language-rust editable">fn main() {
+    let number = 5;
+    print!(&quot;{}&quot;, number);
+}
+</code></pre></pre>
+<p>Note the new <code>Undo Changes</code> button in the editable playpens.</p>
+<a class="header" href="#customizing-the-editor" id="customizing-the-editor"><h2>Customizing the Editor</h2></a>
+<p>By default, the editor is the <a href="https://ace.c9.io/">Ace</a> editor, but, if desired,
+the functionality may be overriden by providing a different folder:</p>
+<pre><code class="language-toml">[output.html.playpen]
+editable = true
+editor = &quot;/path/to/editor&quot;
+</code></pre>
+<p>Note that for the editor changes to function correctly, the <code>book.js</code> inside of
+the <code>theme</code> folder will need to be overriden as it has some couplings with the
+default Ace editor.</p>
+<a class="header" href="#mathjax-support" id="mathjax-support"><h1>MathJax Support</h1></a>
+<p>mdBook has optional support for math equations through
+<a href="https://www.mathjax.org/">MathJax</a>.</p>
+<p>To enable MathJax, you need to add the <code>mathjax-support</code> key to your <code>book.toml</code>
+under the <code>output.html</code> section.</p>
+<pre><code class="language-toml">[output.html]
+mathjax-support = true
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> The usual delimiters MathJax uses are not yet supported. You can't
+currently use <code>$$ ... $$</code> as delimiters and the <code>\[ ... \]</code> delimiters need an
+extra backslash to work. Hopefully this limitation will be lifted soon.</p>
+<p><strong>Note:</strong> When you use double backslashes in MathJax blocks (for example in
+commands such as <code>\begin{cases} \frac 1 2 \\ \frac 3 4 \end{cases}</code>) you need
+to add <em>two extra</em> backslashes (e.g., <code>\begin{cases} \frac 1 2 \\\\ \frac 3 4 \end{cases}</code>).</p>
+</blockquote>
+<a class="header" href="#inline-equations" id="inline-equations"><h3>Inline equations</h3></a>
+<p>Inline equations are delimited by <code>\\(</code> and <code>\\)</code>. So for example, to render the
+following inline equation ( \int x dx = \frac{x^2}{2} + C ) you would write
+the following:</p>
+<pre><code>\\( \int x dx = \frac{x^2}{2} + C \\)
+</code></pre>
+<a class="header" href="#block-equations" id="block-equations"><h3>Block equations</h3></a>
+<p>Block equations are delimited by <code>\\[</code> and <code>\\]</code>. To render the following
+equation</p>
+<p>[ \mu = \frac{1}{N} \sum_{i=0} x_i ]</p>
+<p>you would write:</p>
+<pre><code class="language-bash">\\[ \mu = \frac{1}{N} \sum_{i=0} x_i \\]
+</code></pre>
+<a class="header" href="#mdbook-specific-markdown" id="mdbook-specific-markdown"><h1>mdBook-specific markdown</h1></a>
+<a class="header" href="#hiding-code-lines-1" id="hiding-code-lines-1"><h2>Hiding code lines</h2></a>
+<p>There is a feature in mdBook that lets you hide code lines by prepending them
+with a <code>#</code>.</p>
+<pre><code class="language-bash"># fn main() {
+    let x = 5;
+    let y = 6;
+
+    println!(&quot;{}&quot;, x + y);
+# }
+</code></pre>
+<p>Will render as</p>
+<pre><pre class="playpen"><code class="language-rust"># fn main() {
+    let x = 5;
+    let y = 7;
+
+    println!(&quot;{}&quot;, x + y);
+# }
+</code></pre></pre>
+<a class="header" href="#including-files" id="including-files"><h2>Including files</h2></a>
+<p>With the following syntax, you can include files into your book:</p>
+<pre><code class="language-hbs">{{#include file.rs}}
+</code></pre>
+<p>The path to the file has to be relative from the current source file.</p>
+<p>Usually, this command is used for including code snippets and examples. In this
+case, oftens one would include a specific part of the file e.g. which only
+contains the relevant lines for the example. We support four different modes of
+partial includes:</p>
+<pre><code class="language-hbs">{{#include file.rs:2}}
+{{#include file.rs::10}}
+{{#include file.rs:2:}}
+{{#include file.rs:2:10}}
+</code></pre>
+<p>The first command only includes the second line from file <code>file.rs</code>. The second
+command includes all lines up to line 10, i.e. the lines from 11 till the end of
+the file are omitted. The third command includes all lines from line 2, i.e. the
+first line is omitted. The last command includes the excerpt of <code>file.rs</code>
+consisting of lines 2 to 10.</p>
+<a class="header" href="#inserting-runnable-rust-files" id="inserting-runnable-rust-files"><h2>Inserting runnable Rust files</h2></a>
+<p>With the following syntax, you can insert runnable Rust files into your book:</p>
+<pre><code class="language-hbs">{{#playpen file.rs}}
+</code></pre>
+<p>The path to the Rust file has to be relative from the current source file.</p>
+<p>When play is clicked, the code snippet will be sent to the <a href="https://play.rust-lang.org/">Rust Playpen</a> to be
+compiled and run. The result is sent back and displayed directly underneath the
+code.</p>
+<p>Here is what a rendered code snippet looks like:</p>
+<pre><pre class="playpen"><code class="language-rust">fn main() {
+    println!(&quot;Hello World!&quot;);
+#
+#    // You can even hide lines! :D
+#   println!(&quot;I am hidden! Expand the code snippet to see me&quot;);
+}
+
+</code></pre></pre>
+<a class="header" href="#running-mdbook-in-continuous-integration" id="running-mdbook-in-continuous-integration"><h1>Running <code>mdbook</code> in Continuous Integration</h1></a>
+<p>While the following examples use Travis CI, their principles should
+straightforwardly transfer to other continuous integration providers as well.</p>
+<a class="header" href="#ensuring-your-book-builds-and-tests-pass" id="ensuring-your-book-builds-and-tests-pass"><h2>Ensuring Your Book Builds and Tests Pass</h2></a>
+<p>Here is a sample Travis CI <code>.travis.yml</code> configuration that ensures <code>mdbook build</code> and <code>mdbook test</code> run successfully. The key to fast CI turnaround times
+is caching <code>mdbook</code> installs, so that you aren't compiling <code>mdbook</code> on every CI
+run.</p>
+<pre><code class="language-yaml">language: rust
+sudo: false
+
+cache:
+  - cargo
+
+rust:
+  - stable
+
+before_script:
+  - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
+  - (test -x $HOME/.cargo/bin/mdbook || cargo install --vers &quot;^0.1&quot; mdbook)
+  - cargo install-update -a
+
+script:
+  - cd path/to/mybook &amp;&amp; mdbook build &amp;&amp; mdbook test
+</code></pre>
+<a class="header" href="#deploying-your-book-to-github-pages" id="deploying-your-book-to-github-pages"><h2>Deploying Your Book to GitHub Pages</h2></a>
+<p>Following these instructions will result in your book being published to GitHub
+pages after a successful CI run on your repository's <code>master</code> branch.</p>
+<p>First, create a new GitHub &quot;Personal Access Token&quot; with the &quot;public_repo&quot;
+permissions (or &quot;repo&quot; for private repositories). Go to your repository's Travis
+CI settings page and add an environment variable named <code>GITHUB_TOKEN</code> that is
+marked secure and <em>not</em> shown in the logs.</p>
+<p>Then, append this snippet to your <code>.travis.yml</code> and update the path to the
+<code>book</code> directory:</p>
+<pre><code class="language-yaml">deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: path/to/mybook/book
+  keep-history: false
+  on:
+    branch: master
+</code></pre>
+<p>That's it!</p>
+<a class="header" href="#for-developers" id="for-developers"><h1>For Developers</h1></a>
+<p>While <code>mdbook</code> is mainly used as a command line tool, you can also import the
+underlying library directly and use that to manage a book. It also has a fairly
+flexible plugin mechanism, allowing you to create your own custom tooling and
+consumers (often referred to as <em>backends</em>) if you need to do some analysis of
+the book or render it in a different format.</p>
+<p>The <em>For Developers</em> chapters are here to show you the more advanced usage of
+<code>mdbook</code>.</p>
+<p>The two main ways a developer can hook into the book's build process is via,</p>
+<ul>
+<li><a href="preprocessors.html">Preprocessors</a></li>
+<li><a href="backends.html">Alternate Backends</a></li>
+</ul>
+<a class="header" href="#the-build-process" id="the-build-process"><h2>The Build Process</h2></a>
+<p>The process of rendering a book project goes through several steps.</p>
+<ol>
+<li>Load the book
+<ul>
+<li>Parse the <code>book.toml</code>, falling back to the default <code>Config</code> if it doesn't
+exist</li>
+<li>Load the book chapters into memory</li>
+<li>Discover which preprocessors/backends should be used</li>
+</ul>
+</li>
+<li>Run the preprocessors</li>
+<li>Call each backend in turn</li>
+</ol>
+<a class="header" href="#using-mdbook-as-a-library" id="using-mdbook-as-a-library"><h2>Using <code>mdbook</code> as a Library</h2></a>
+<p>The <code>mdbook</code> binary is just a wrapper around the <code>mdbook</code> crate, exposing its
+functionality as a command-line program. As such it is quite easy to create your
+own programs which use <code>mdbook</code> internally, adding your own functionality (e.g.
+a custom preprocessor) or tweaking the build process.</p>
+<p>The easiest way to find out how to use the <code>mdbook</code> crate is by looking at the
+<a href="https://docs.rs/mdbook/*/mdbook/">API Docs</a>. The top level documentation explains how one would use the
+<a href="http://rust-lang-nursery.github.io/mdBook/mdbook/book/struct.MDBook.html"><code>MDBook</code></a> type to load and build a book, while the <a href="file:///home/michael/Documents/forks/mdBook/target/doc.html">config</a> module gives a good
+explanation on the configuration system.</p>
+<a class="header" href="#preprocessors" id="preprocessors"><h1>Preprocessors</h1></a>
+<p>A <em>preprocessor</em> is simply a bit of code which gets run immediately after the
+book is loaded and before it gets rendered, allowing you to update and mutate
+the book. Possible use cases are:</p>
+<ul>
+<li>Creating custom helpers like <code>{{#include /path/to/file.md}}</code></li>
+<li>Updating links so <code>[some chapter](some_chapter.md)</code> is automatically changed
+to <code>[some chapter](some_chapter.html)</code> for the HTML renderer</li>
+<li>Substituting in latex-style expressions (<code>$$ \frac{1}{3} $$</code>) with their
+mathjax equivalents</li>
+</ul>
+<a class="header" href="#implementing-a-preprocessor" id="implementing-a-preprocessor"><h2>Implementing a Preprocessor</h2></a>
+<p>A preprocessor is represented by the <code>Preprocessor</code> trait.</p>
+<pre><pre class="playpen"><code class="language-rust">
+# #![allow(unused_variables)]
+#fn main() {
+pub trait Preprocessor {
+    fn name(&amp;self) -&gt; &amp;str;
+    fn run(&amp;self, ctx: &amp;PreprocessorContext, book: Book) -&gt; Result&lt;Book&gt;;
+    fn supports_renderer(&amp;self, _renderer: &amp;str) -&gt; bool {
+        true
+    }
+}
+#}</code></pre></pre>
+<p>Where the <code>PreprocessorContext</code> is defined as</p>
+<pre><pre class="playpen"><code class="language-rust">
+# #![allow(unused_variables)]
+#fn main() {
+pub struct PreprocessorContext {
+    pub root: PathBuf,
+    pub config: Config,
+    /// The `Renderer` this preprocessor is being used with.
+    pub renderer: String,
+}
+#}</code></pre></pre>
+<p>The <code>renderer</code> value allows you react accordingly, for example, PDF or HTML.</p>
+<a class="header" href="#a-complete-example" id="a-complete-example"><h2>A complete Example</h2></a>
+<p>The magic happens within the <code>run(...)</code> method of the
+<a href="https://docs.rs/mdbook/latest/mdbook/preprocess/trait.Preprocessor.html"><code>Preprocessor</code></a> trait implementation.</p>
+<p>As direct access to the chapters is not possible, you will probably end up
+iterating them using <code>for_each_mut(...)</code>:</p>
+<pre><pre class="playpen"><code class="language-rust">
+# #![allow(unused_variables)]
+#fn main() {
+book.for_each_mut(|item: &amp;mut BookItem| {
+    if let BookItem::Chapter(ref mut chapter) = *item {
+      eprintln!(&quot;{}: processing chapter '{}'&quot;, self.name(), chapter.name);
+      res = Some(
+          match Deemphasize::remove_emphasis(&amp;mut num_removed_items, chapter) {
+              Ok(md) =&gt; {
+                  chapter.content = md;
+                  Ok(())
+              }
+              Err(err) =&gt; Err(err),
+          },
+      );
+  }
+});
+#}</code></pre></pre>
+<p>The <code>chapter.content</code> is just a markdown formatted string, and you will have to
+process it in some way. Even though it's entirely possible to implement some
+sort of manual find &amp; replace operation, if that feels too unsafe you can use
+<a href="https://crates.io/crates/pulldown-cmark"><code>pulldown-cmark</code></a> to parse the string into events and work on them instead.</p>
+<p>Finally you can use <a href="https://crates.io/crates/pulldown-cmark-to-cmark"><code>pulldown-cmark-to-cmark</code></a> to transform these events
+back to a string.</p>
+<p>The following code block shows how to remove all emphasis from markdown, and do
+so safely.</p>
+<pre><pre class="playpen"><code class="language-rust">
+# #![allow(unused_variables)]
+#fn main() {
+fn remove_emphasis(
+    num_removed_items: &amp;mut usize,
+    chapter: &amp;mut Chapter,
+) -&gt; Result&lt;String&gt; {
+    let mut buf = String::with_capacity(chapter.content.len());
+
+    let events = Parser::new(&amp;chapter.content).filter(|e| {
+        let should_keep = match *e {
+            Event::Start(Tag::Emphasis)
+            | Event::Start(Tag::Strong)
+            | Event::End(Tag::Emphasis)
+            | Event::End(Tag::Strong) =&gt; false,
+            _ =&gt; true,
+        };
+        if !should_keep {
+            *num_removed_items += 1;
+        }
+        should_keep
+    });
+
+    cmark(events, &amp;mut buf, None).map(|_| buf).map_err(|err| {
+        Error::from(format!(&quot;Markdown serialization failed: {}&quot;, err))
+    })
+}
+#}</code></pre></pre>
+<p>For everything else, have a look <a href="https://github.com/rust-lang-nursery/mdBook/blob/master/examples/de-emphasize.rs">at the complete example</a>.</p>
+<a class="header" href="#alternate-backends" id="alternate-backends"><h1>Alternate Backends</h1></a>
+<p>A &quot;backend&quot; is simply a program which <code>mdbook</code> will invoke during the book
+rendering process. This program is passed a JSON representation of the book and
+configuration information via <code>stdin</code>. Once the backend receives this
+information it is free to do whatever it wants.</p>
+<p>There are already several alternate backends on GitHub which can be used as a
+rough example of how this is accomplished in practice.</p>
+<ul>
+<li><a href="https://github.com/Michael-F-Bryan/mdbook-linkcheck">mdbook-linkcheck</a> - a simple program for verifying the book doesn't contain
+any broken links</li>
+<li><a href="https://github.com/Michael-F-Bryan/mdbook-epub">mdbook-epub</a> - an EPUB renderer</li>
+<li><a href="https://github.com/Michael-F-Bryan/mdbook-test">mdbook-test</a> - a program to run the book's contents through <a href="https://github.com/budziq/rust-skeptic">rust-skeptic</a> to
+verify everything compiles and runs correctly (similar to <code>rustdoc --test</code>)</li>
+</ul>
+<p>This page will step you through creating your own alternate backend in the form
+of a simple word counting program. Although it will be written in Rust, there's
+no reason why it couldn't be accomplished using something like Python or Ruby.</p>
+<a class="header" href="#setting-up" id="setting-up"><h2>Setting Up</h2></a>
+<p>First you'll want to create a new binary program and add <code>mdbook</code> as a
+dependency.</p>
+<pre><code>$ cargo new --bin mdbook-wordcount
+$ cd mdbook-wordcount 
+$ cargo add mdbook
+</code></pre>
+<p>When our <code>mdbook-wordcount</code> plugin is invoked, <code>mdbook</code> will send it a JSON
+version of <a href="http://rust-lang-nursery.github.io/mdBook/mdbook/renderer/struct.RenderContext.html"><code>RenderContext</code></a> via our plugin's <code>stdin</code>. For convenience, there's
+a <a href="http://rust-lang-nursery.github.io/mdBook/mdbook/renderer/struct.RenderContext.html#method.from_json"><code>RenderContext::from_json()</code></a> constructor which will load a <code>RenderContext</code>.</p>
+<p>This is all the boilerplate necessary for our backend to load the book.</p>
+<pre><pre class="playpen"><code class="language-rust">// src/main.rs
+extern crate mdbook;
+
+use std::io;
+use mdbook::renderer::RenderContext;
+
+fn main() {
+    let mut stdin = io::stdin();
+    let ctx = RenderContext::from_json(&amp;mut stdin).unwrap();
+}
+</code></pre></pre>
+<blockquote>
+<p><strong>Note:</strong> The <code>RenderContext</code> contains a <code>version</code> field. This lets backends
+figure out whether they are compatible with the version of <code>mdbook</code> it's being
+called by. This <code>version</code> comes directly from the corresponding field in
+<code>mdbook</code>'s <code>Cargo.toml</code>.</p>
+</blockquote>
+<p>It is recommended that backends use the <a href="https://crates.io/crates/semver"><code>semver</code></a> crate to inspect this field
+and emit a warning if there may be a compatibility issue.</p>
+<a class="header" href="#inspecting-the-book" id="inspecting-the-book"><h2>Inspecting the Book</h2></a>
+<p>Now our backend has a copy of the book, lets count how many words are in each
+chapter!</p>
+<p>Because the <code>RenderContext</code> contains a <a href="http://rust-lang-nursery.github.io/mdBook/mdbook/book/struct.Book.html"><code>Book</code></a> field (<code>book</code>), and a <code>Book</code> has
+the <a href="http://rust-lang-nursery.github.io/mdBook/mdbook/book/struct.Book.html#method.iter"><code>Book::iter()</code></a> method for iterating over all items in a <code>Book</code>, this step
+turns out to be just as easy as the first.</p>
+<pre><pre class="playpen"><code class="language-rust">
+fn main() {
+    let mut stdin = io::stdin();
+    let ctx = RenderContext::from_json(&amp;mut stdin).unwrap();
+
+    for item in ctx.book.iter() {
+        if let BookItem::Chapter(ref ch) = *item {
+            let num_words = count_words(ch);
+            println!(&quot;{}: {}&quot;, ch.name, num_words);
+        }
+    }
+}
+
+fn count_words(ch: &amp;Chapter) -&gt; usize {
+    ch.content.split_whitespace().count()
+}
+</code></pre></pre>
+<a class="header" href="#enabling-the-backend" id="enabling-the-backend"><h2>Enabling the Backend</h2></a>
+<p>Now we've got the basics running, we want to actually use it. First, install the
+program.</p>
+<pre><code>$ cargo install
+</code></pre>
+<p>Then <code>cd</code> to the particular book you'd like to count the words of and update its
+<code>book.toml</code> file.</p>
+<pre><code class="language-diff">  [book]
+  title = &quot;mdBook Documentation&quot;
+  description = &quot;Create book from markdown files. Like Gitbook but implemented in Rust&quot;
+  authors = [&quot;Mathieu David&quot;, &quot;Michael-F-Bryan&quot;]
+
++ [output.html]
+
++ [output.wordcount]
+</code></pre>
+<p>When it loads a book into memory, <code>mdbook</code> will inspect your <code>book.toml</code> file to
+try and figure out which backends to use by looking for all <code>output.*</code> tables.
+If none are provided it'll fall back to using the default HTML renderer.</p>
+<p>Notably, this means if you want to add your own custom backend you'll also need
+to make sure to add the HTML backend, even if its table just stays empty.</p>
+<p>Now you just need to build your book like normal, and everything should <em>Just
+Work</em>.</p>
+<pre><code>$ mdbook build
+...
+2018-01-16 07:31:15 [INFO] (mdbook::renderer): Invoking the &quot;mdbook-wordcount&quot; renderer
+mdBook: 126
+Command Line Tool: 224
+init: 283
+build: 145
+watch: 146
+serve: 292
+test: 139
+Format: 30
+SUMMARY.md: 259
+Configuration: 784
+Theme: 304
+index.hbs: 447
+Syntax highlighting: 314
+MathJax Support: 153
+Rust code specific features: 148
+For Developers: 788
+Alternate Backends: 710
+Contributors: 85
+</code></pre>
+<p>The reason we didn't need to specify the full name/path of our <code>wordcount</code>
+backend is because <code>mdbook</code> will try to <em>infer</em> the program's name via
+convention. The executable for the <code>foo</code> backend is typically called
+<code>mdbook-foo</code>, with an associated <code>[output.foo]</code> entry in the <code>book.toml</code>. To
+explicitly tell <code>mdbook</code> what command to invoke (it may require command-line
+arguments or be an interpreted script), you can use the <code>command</code> field.</p>
+<pre><code class="language-diff">  [book]
+  title = &quot;mdBook Documentation&quot;
+  description = &quot;Create book from markdown files. Like Gitbook but implemented in Rust&quot;
+  authors = [&quot;Mathieu David&quot;, &quot;Michael-F-Bryan&quot;]
+
+  [output.html]
+
+  [output.wordcount]
++ command = &quot;python /path/to/wordcount.py&quot;
+</code></pre>
+<a class="header" href="#configuration" id="configuration"><h2>Configuration</h2></a>
+<p>Now imagine you don't want to count the number of words on a particular chapter
+(it might be generated text/code, etc). The canonical way to do this is via the
+usual <code>book.toml</code> configuration file by adding items to your <code>[output.foo]</code>
+table.</p>
+<p>The <code>Config</code> can be treated roughly as a nested hashmap which lets you call
+methods like <code>get()</code> to access the config's contents, with a
+<code>get_deserialized()</code> convenience method for retrieving a value and automatically
+deserializing to some arbitrary type <code>T</code>.</p>
+<p>To implement this, we'll create our own serializable <code>WordcountConfig</code> struct
+which will encapsulate all configuration for this backend.</p>
+<p>First add <code>serde</code> and <code>serde_derive</code> to your <code>Cargo.toml</code>,</p>
+<pre><code>$ cargo add serde serde_derive
+</code></pre>
+<p>And then you can create the config struct,</p>
+<pre><pre class="playpen"><code class="language-rust">
+# #![allow(unused_variables)]
+#fn main() {
+extern crate serde;
+#[macro_use]
+extern crate serde_derive;
+
+...
+
+#[derive(Debug, Default, Serialize, Deserialize)]
+#[serde(default, rename_all = &quot;kebab-case&quot;)]
+pub struct WordcountConfig {
+  pub ignores: Vec&lt;String&gt;,
+}
+#}</code></pre></pre>
+<p>Now we just need to deserialize the <code>WordcountConfig</code> from our <code>RenderContext</code>
+and then add a check to make sure we skip ignored chapters.</p>
+<pre><code class="language-diff">  fn main() {
+      let mut stdin = io::stdin();
+      let ctx = RenderContext::from_json(&amp;mut stdin).unwrap();
++     let cfg: WordcountConfig = ctx.config
++         .get_deserialized(&quot;output.wordcount&quot;)
++         .unwrap_or_default();
+  
+      for item in ctx.book.iter() {
+          if let BookItem::Chapter(ref ch) = *item {
++             if cfg.ignores.contains(&amp;ch.name) {
++                 continue;
++             }
++ 
+              let num_words = count_words(ch);
+              println!(&quot;{}: {}&quot;, ch.name, num_words);
+          }
+      }
+  }
+</code></pre>
+<a class="header" href="#output-and-signalling-failure" id="output-and-signalling-failure"><h2>Output and Signalling Failure</h2></a>
+<p>While it's nice to print word counts to the terminal when a book is built, it
+might also be a good idea to output them to a file somewhere. <code>mdbook</code> tells a
+backend where it should place any generated output via the <code>destination</code> field
+in <a href="http://rust-lang-nursery.github.io/mdBook/mdbook/renderer/struct.RenderContext.html"><code>RenderContext</code></a>.</p>
+<pre><code class="language-diff">+ use std::fs::{self, File};
++ use std::io::{self, Write};
+- use std::io;
+  use mdbook::renderer::RenderContext;
+  use mdbook::book::{BookItem, Chapter};
+  
+  fn main() {
+    ...
+  
++     let _ = fs::create_dir_all(&amp;ctx.destination);
++     let mut f = File::create(ctx.destination.join(&quot;wordcounts.txt&quot;)).unwrap();
++ 
+      for item in ctx.book.iter() {
+          if let BookItem::Chapter(ref ch) = *item {
+              ...
+  
+              let num_words = count_words(ch);
+              println!(&quot;{}: {}&quot;, ch.name, num_words);
++             writeln!(f, &quot;{}: {}&quot;, ch.name, num_words).unwrap();
+          }
+      }
+  }
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> There is no guarantee that the destination directory exists or is
+empty (<code>mdbook</code> may leave the previous contents to let backends do caching),
+so it's always a good idea to create it with <code>fs::create_dir_all()</code>.</p>
+</blockquote>
+<p>There's always the possibility that an error will occur while processing a book
+(just look at all the <code>unwrap()</code>'s we've written already), so <code>mdbook</code> will
+interpret a non-zero exit code as a rendering failure.</p>
+<p>For example, if we wanted to make sure all chapters have an <em>even</em> number of
+words, erroring out if an odd number is encountered, then you may do something
+like this:</p>
+<pre><code class="language-diff">+ use std::process;
+  ...
+
+  fn main() {
+      ...
+  
+      for item in ctx.book.iter() {
+          if let BookItem::Chapter(ref ch) = *item {
+              ...
+  
+              let num_words = count_words(ch);
+              println!(&quot;{}: {}&quot;, ch.name, num_words);
+              writeln!(f, &quot;{}: {}&quot;, ch.name, num_words).unwrap();
+
++             if cfg.deny_odds &amp;&amp; num_words % 2 == 1 {
++               eprintln!(&quot;{} has an odd number of words!&quot;, ch.name);
++               process::exit(1);
+              }
+          }
+      }
+  }
+
+  #[derive(Debug, Default, Serialize, Deserialize)]
+  #[serde(default, rename_all = &quot;kebab-case&quot;)]
+  pub struct WordcountConfig {
+      pub ignores: Vec&lt;String&gt;,
++     pub deny_odds: bool,
+  }
+</code></pre>
+<p>Now, if we reinstall the backend and build a book,</p>
+<pre><code>$ cargo install --force
+$ mdbook build /path/to/book
+...
+2018-01-16 21:21:39 [INFO] (mdbook::renderer): Invoking the &quot;wordcount&quot; renderer
+mdBook: 126
+Command Line Tool: 224
+init: 283
+init has an odd number of words!
+2018-01-16 21:21:39 [ERROR] (mdbook::renderer): Renderer exited with non-zero return code.
+2018-01-16 21:21:39 [ERROR] (mdbook::utils): Error: Rendering failed
+2018-01-16 21:21:39 [ERROR] (mdbook::utils):    Caused By: The &quot;mdbook-wordcount&quot; renderer failed
+</code></pre>
+<p>As you've probably already noticed, output from the plugin's subprocess is
+immediately passed through to the user. It is encouraged for plugins to follow
+the &quot;rule of silence&quot; and only generate output when necessary (e.g. an error in
+generation or a warning).</p>
+<p>All environment variables are passed through to the backend, allowing you to use
+the usual <code>RUST_LOG</code> to control logging verbosity.</p>
+<a class="header" href="#wrapping-up" id="wrapping-up"><h2>Wrapping Up</h2></a>
+<p>Although contrived, hopefully this example was enough to show how you'd create
+an alternate backend for <code>mdbook</code>. If you feel it's missing something, don't
+hesitate to create an issue in the <a href="https://github.com/rust-lang-nursery/mdBook/issues">issue tracker</a> so we can improve the user
+guide.</p>
+<p>The existing backends mentioned towards the start of this chapter should serve
+as a good example of how it's done in real life, so feel free to skim through
+the source code or ask questions.</p>
+<a class="header" href="#embedded" id="embedded"><h1>Embedded</h1></a>
+<a class="header" href="#links" id="links"><h2>Links</h2></a>
+<ul>
+<li><a href="https://github.com/rust-embedded">GutHub</a></li>
+<li><a href="https://github.com/rust-embedded/awesome-embedded-rust">awesome</a></li>
+<li><a href="https://github.com/rust-embedded/wg.git">Arbeitsgruppe</a></li>
+<li><a href="https://github.com/rust-embedded/embedded-hal">embedded-hal</a></li>
+<li><a href="https://www.keil.com/pack/doc/CMSIS/SVD/html/index.html">SVG System View Description</a></li>
+<li><a href="https://github.com/thenewwazoo">Andere Losung HAL problem bei Rust</a></li>
+<li><a href="https://os.mbed.com/docs/v5.10">OS.mbed</a></li>
+<li><a href="https://uk.farnell.com">Electronichandler</a></li>
+<li><a href="https://docs.rs/embedded-hal/0.2.1/embedded_hal">HAL-Hardware Abstraction Level</a></li>
+</ul>
+<a class="header" href="#embedded-hardware" id="embedded-hardware"><h1>Embedded Hardware</h1></a>
+<a class="header" href="#stm-electronics" id="stm-electronics"><h2>STM-Electronics</h2></a>
+<p><a href="https://de.rs-online.com/web/cart/partsList.html?method=displayPartsListDetails&amp;partsListId=157558192">Evaluation Einkaufsliste</a></p>
+<p>Entwiecklung tools Programmer, Debug &amp; Test</p>
+<ul>
+<li><a href="https://www.st.com/content/st_com/en/products/development-tools/hardware-development-tools/development-tool-hardware-for-mcus/debug-hardware-for-mcus/debug-hardware-for-stm32-mcus/stlink-v3set.html">STLINK-V3SET</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/development-tools/hardware-development-tools/development-tool-hardware-for-mcus/debug-hardware-for-mcus/debug-hardware-for-stm32-mcus/multilink-universal-fx.html">Multilink Universal FX</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/development-tools/hardware-development-tools/development-tool-hardware-for-mcus/programming-hardware-for-mcus/programming-hardware-for-stm32-mcus/cyclone-fx.html">MCYCLONE FX</a></li>
+</ul>
+<a class="header" href="#boards" id="boards"><h2>Boards</h2></a>
+<ul>
+<li><a href="nucleo-f042k6.html">NUCLEO-F042K6</a></li>
+<li><a href="nucleo-f103rb.html">NUCLEO-F103rb</a></li>
+<li><a href="nucleo-f446re.html">NUCLEO-F446RE</a>
+-<a href="stm32f446re.html">STM32F446RE</a></li>
+</ul>
+<a class="header" href="#nucleo-f042k6" id="nucleo-f042k6"><h1>NUCLEO-F042K6</h1></a>
+<p><code>STM32 Nucleo-32</code> development board with  <code>TM32F042K6</code> MCU, supports Arduino connectivity</p>
+<p><a href="https://www.st.com/en/evaluation-tools/nucleo-f042k6.html"> Hersteller Homepage</a></p>
+<a class="header" href="#datenblatt" id="datenblatt"><h2>Datenblatt</h2></a>
+<ul>
+<li>TM32 microcontrollers in 32-pin packages</li>
+<li>extension with Arduino™nano connectivity</li>
+<li>mbed-enabled (http://mbed.org)</li>
+<li>on-board ST-LINK/V2-1 debugger/programmer</li>
+<li>USB reenumeration capability: three different interfaces supported on USB:
+<ul>
+<li>Virtual Com port</li>
+<li>mass storage</li>
+<li>debug port</li>
+</ul>
+</li>
+<li>flexible board power supply:
+<ul>
+<li>USB VBUS</li>
+<li>external source</li>
+</ul>
+</li>
+<li>three LEDs:
+<ul>
+<li>USB communication (LD1), power LED (LD2), user LED (LD3)</li>
+</ul>
+</li>
+<li>reset push button</li>
+<li>supported by wide choice of Integrated Development Environments (IDEs) including IAR™, Keil®, GCC-based IDEs (AC6 SW4STM32, ...)</li>
+</ul>
+<a class="header" href="#nucleo-f103rb" id="nucleo-f103rb"><h1>NUCLEO-F103RB</h1></a>
+<p><code>STM32 Nucleo-64</code> development board with <code>STM32F103RB</code> MCU, supports Arduino and ST morpho connectivity</p>
+<p><a href="https://www.st.com/en/evaluation-tools/nucleo-f103rb.html"> Hersteller Homepage</a></p>
+<a class="header" href="#datenblatt-1" id="datenblatt-1"><h2>Datenblatt</h2></a>
+<ul>
+<li>STM32 microcontroller in LQFP64 package</li>
+<li>External SMPS to generate Vcore logic supply (only available on '-P' suffixed boards)</li>
+<li>1 user LED shared with Arduino™</li>
+<li>1 user and 1 reset push-buttons</li>
+<li>32.768 kHz LSE crystal oscillator</li>
+<li>Board expansion connectors:
+<ul>
+<li>Arduino™ Uno V3</li>
+<li>ST morpho extension pin headers for full access to all STM32 I/Os</li>
+<li>External SMPS experimentation dedicated connector (only available on '-P' suffixed boards)</li>
+</ul>
+</li>
+<li>Flexible power-supply options: ST-LINK USB VBUS or external sources</li>
+<li>On-board ST-LINK/V2-1 debugger/programmer with USB re-enumeration capability. Three different interfaces supported on USB: mass storage, Virtual COM port and debug port</li>
+<li>Comprehensive free software libraries and examples available with the STM32Cube MCU Package</li>
+<li>Support of a wide choice of Integrated Development Environments (IDEs) including IAR™, Keil®, GCC-based IDEs, Arm® Mbed™</li>
+<li>Arm® Mbed Enabled™ compliant (only for some Nucleo part numbers)</li>
+</ul>
+<a class="header" href="#stm32f4discovery" id="stm32f4discovery"><h1>STM32F4DISCOVERY</h1></a>
+<p><code>STM32F4DISCOVERY</code> kit with <code>STM32F407VG</code> MCU * New order code STM32F407G-DISC1 (replaces STM32F4DISCOVERY)</p>
+<p><a href="https://www.st.com/en/evaluation-tools/stm32f4discovery.html"> Hersteller Homepage</a></p>
+<a class="header" href="#datenblatt-2" id="datenblatt-2"><h2>Datenblatt</h2></a>
+<ul>
+<li>STM32F407VGT6 microcontroller featuring 32-bit ARM®Cortex®-M4 with FPU core, 1-Mbyte Flash memory, 192-Kbyte RAM in an LQFP100 package</li>
+<li>On-board ST-LINK/V2 on STM32F4DISCOVERY (old reference) or ST-LINK/V2-A on STM32F407G-DISC1 (new order code)</li>
+<li>USB ST-LINK with re-enumeration capability and three different interfaces:
+<ul>
+<li>Debug port</li>
+<li>Virtual Com port (with new order code only)</li>
+<li>Mass storage (with new order code only)</li>
+</ul>
+</li>
+<li>Board power supply: through USB bus or from an external 5 V supply voltage</li>
+<li>External application power supply: 3 V and 5 V</li>
+<li>LIS302DL or LIS3DSH ST MEMS 3-axis accelerometer</li>
+<li>MP45DT02 ST-MEMS audio sensor omni-directional digital microphone</li>
+<li>CS43L22 audio DAC with integrated class D speaker driver</li>
+<li>Eight LEDs:
+<ul>
+<li>LD1 (red/green) for USB communication</li>
+<li>LD2 (red) for 3.3 V power on</li>
+<li>Four user LEDs, LD3 (orange), LD4 (green), LD5 (red) and LD6 (blue)</li>
+<li>2 USB OTG LEDs LD7 (green) VBUS and LD8 (red) over-current</li>
+</ul>
+</li>
+<li>Two push-buttons (user and reset)</li>
+<li>USB OTG FS with micro-AB connector</li>
+<li>Extension header for all LQFP100 I/Os for quick connection to prototyping board and easy probing</li>
+<li>Comprehensive free software including a variety of examples, part of STM32CubeF4 package or STSW-STM32068 to use legacy standard libraries.</li>
+</ul>
+<a class="header" href="#stm32f429idiscovery" id="stm32f429idiscovery"><h1>STM32F429IDISCOVERY</h1></a>
+<p><code>STM32F429IDISCOVERY</code> kit with <code>STM32F429ZI</code> MCU * New order code STM32F429I-DISC1 (replaces STM32F429I-DISCO)</p>
+<p><a href="https://www.st.com/en/evaluation-tools/stm32f4discovery.html">Hersteller Homepage</a></p>
+<a class="header" href="#datenblatt-3" id="datenblatt-3"><h2>Datenblatt</h2></a>
+<ul>
+<li><code>STM32F429ZIT6</code> microcontroller featuring 2 Mbytes of Flash memory, 256 Kbytes of RAM in an LQFP144 package</li>
+<li>On-board ST-LINK/V2 on STM32F429I-DISCO (old order code) or ST-LINK/V2-B on STM32F429I-DISC1 (new order code)</li>
+<li>mbed™-enabled (see http://mbed.org) with the new order code only</li>
+<li>USB functions:
+<ul>
+<li>Debug port</li>
+<li>Virtual COM port (with new order code only)</li>
+<li>Mass storage (with new order code only)</li>
+</ul>
+</li>
+<li>Board power supply: through the USB bus or from an external 3 V or 5 V supply voltage</li>
+<li>2.4&quot; QVGA TFT LCD</li>
+<li>64-Mbit SDRAM</li>
+<li>L3GD20, ST-MEMS motion sensor 3-axis digital output gyroscope</li>
+<li>Six LEDs:
+<ul>
+<li>LD1 (red/green) for USB communication</li>
+<li>LD2 (red) for 3.3 V power-on</li>
+<li>Two user LEDs: LD3 (green), LD4 (red)</li>
+<li>Two USB OTG LEDs: LD5 (green) VBUS and LD6 (red) OC (over-current)</li>
+</ul>
+</li>
+<li>Two push-buttons (user and reset)</li>
+<li>USB OTG with micro-AB connector</li>
+<li>Extension header for LQFP144 I/Os for a quick connection to the prototyping board and an easy probing</li>
+<li>Comprehensive free software including a variety of examples, part of STM32CubeF4 package or STSW-STM32138, for using legacy standard libraries</li>
+</ul>
+<a class="header" href="#regelungstechnik" id="regelungstechnik"><h1>Regelungstechnik</h1></a>
+<a class="header" href="#regelungstechnik-robotik" id="regelungstechnik-robotik"><h1>Regelungstechnik, Robotik</h1></a>
+<p><a href="https://de.wikipedia.org/wiki/Kontrolltheorie">Teoretische und matematische Anteil aus Wikipedia</a> und hier auf Englich <a href="https://en.wikipedia.org/wiki/Control_theory">Control theory</a> and <a href="https://en.wikipedia.org/wiki/Control_engineering">control systems engineering</a></p>
+<p><a href="https://en.wikibooks.org/wiki/Control_Systems">Wikibook Englich <code>Control Systems</code></a></p>
+<p><code>Control Systems is an inter-disciplinary engineering text that analyzes the effects and interactions of mathematical systems. This book is for third and fourth year undergraduates in an engineering program.</code></p>
+<p><a href="https://de.wikipedia.org/wiki/Regler">WiKi</a>
+<a href="https://de.wikipedia.org/wiki/Automat_(Informatik)">Automat</a></p>
+<a class="header" href="#a2d-3d-algebra-und-kollisionserkennung" id="a2d-3d-algebra-und-kollisionserkennung"><h2>2D-3D Algebra und Kollisionserkennung</h2></a>
+<p><code>ncollide</code> is a 2 and 3-dimensional collision detection library written with
+the rust programming language.</p>
+<p>The official user guide is available <a href="http://ncollide.org">here</a>.
+The rustdoc documentation is available <a href="http://ncollide.org/rustdoc/ncollide3d">for 3D</a> and <a href="http://ncollide.org/rustdoc/ncollide3d">for 2D</a>.</p>
+<p><code>nalgebra</code> is a linear algebra library written for Rust targeting:</p>
+<ul>
+<li>General-purpose linear algebra (still lacks a lot of features…)</li>
+<li>Real time computer graphics.</li>
+<li>Real time computer physics.</li>
+</ul>
+<p>The official user guide is available <a href="http://ncollide.org">here</a>.</p>
+<a class="header" href="#simulation" id="simulation"><h2>Simulation</h2></a>
+<p><code>nphysics</code> is a 2 and 3-dimensional physics engine for games and animations. It uses ncollide for collision detection, and <code>nalgebra</code> for vector/matrix math. 2D and 3D implementations both share the same code!</p>
+<ul>
+<li>Static and dynamic rigid bodies.</li>
+<li>Common convex primitives: cone, box, ball, cylinder.</li>
+<li>Concave geometries build from convex primitives (aka. compound geometries).</li>
+<li>Stable stacking.</li>
+<li>Island based sleeping (objects deactivation).</li>
+<li>Ray casting.</li>
+<li>Swept sphere based continuous collision detection.</li>
+<li>Ball-in-socket joint.</li>
+<li>FixedJoint joint.</li>
+<li>Sensors.</li>
+</ul>
+<p>The official user guide is available <a href="http://nphysics.org%22">here</a></p>
+<a class="header" href="#interessante-projekten" id="interessante-projekten"><h2>Interessante Projekten</h2></a>
+<p><a href="eurobot.html">Eurobot</a>
+<a href="https://github.com/braun-robotics">braun robotic</a></p>
+<a class="header" href="#umweltanalutik" id="umweltanalutik"><h1>Umweltanalutik</h1></a>
+<a class="header" href="#git-and-git-flow-cheat-sheet-a-hrefhttpsgithubcomsindresorhusawesomeimg-srchttpscdnrawgitcomsindresorhusawesomed7305f38d29fed78fa85652e3a63e154dd8e8829mediabadgesvg-altawesome-a-a-hrefhttpstravis-ciorgarslanbilalgit-cheat-sheetimg-srchttpstravis-ciorgarslanbilalgit-cheat-sheetsvgbranchmaster-altbuild-status-a" id="git-and-git-flow-cheat-sheet-a-hrefhttpsgithubcomsindresorhusawesomeimg-srchttpscdnrawgitcomsindresorhusawesomed7305f38d29fed78fa85652e3a63e154dd8e8829mediabadgesvg-altawesome-a-a-hrefhttpstravis-ciorgarslanbilalgit-cheat-sheetimg-srchttpstravis-ciorgarslanbilalgit-cheat-sheetsvgbranchmaster-altbuild-status-a"><h1>Git and Git Flow Cheat Sheet <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" /></a> <a href="https://travis-ci.org/arslanbilal/git-cheat-sheet"><img src="https://travis-ci.org/arslanbilal/git-cheat-sheet.svg?branch=master" alt="Build Status" /></a></h1></a>
+<hr>
+<p align="center">
+    <img alt="Git" src="./Img/git-logo.png" height="190" width="455">
+</p>
+<hr>
+<a class="header" href="#other-available-languages" id="other-available-languages"><h1>Other Available Languages:</h1></a>
+<ol>
+<li><a href="https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-ar.md">Arabic Git Cheat Sheet</a></li>
+<li><a href="https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-zh.md">Chinese Git Cheat Sheet</a></li>
+<li><a href="https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-hi.md">Hindi Git Cheat Sheet</a></li>
+<li><a href="https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-tr.md">Turkish Git Cheat Sheet</a></li>
+<li><a href="https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-es.md">Spanish Git Cheat Sheet</a></li>
+<li><a href="https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-el.md">Greek Git Cheat Sheet</a></li>
+</ol>
+<p>Git cheat sheet saves you from learning all the commands by heart.</p>
+<p>Be free to contribute, update the grammar mistakes. You are also free to add your language file.</p>
+<hr>
+<a class="header" href="#git-cheat-sheet-english" id="git-cheat-sheet-english"><h1>Git Cheat Sheet English</h1></a>
+<a class="header" href="#index" id="index"><h3>Index</h3></a>
+<ul>
+<li><a href="#setup">Set Up</a></li>
+<li><a href="#configuration-files">Configuration Files</a></li>
+<li><a href="#create">Create</a></li>
+<li><a href="#local-changes">Local Changes</a></li>
+<li><a href="#search">Search</a></li>
+<li><a href="#commit-history">Commit History</a></li>
+<li><a href="#branches--tags">Branches &amp; Tags</a></li>
+<li><a href="#update--publish">Update &amp; Publish</a></li>
+<li><a href="#merge--rebase">Merge &amp; Rebase</a></li>
+<li><a href="#undo">Undo</a></li>
+<li><a href="#git-flow">Git Flow</a></li>
+</ul>
+<hr>
+<a class="header" href="#setup" id="setup"><h2>Setup</h2></a>
+<a class="header" href="#show-current-configuration" id="show-current-configuration"><h5>Show current configuration:</h5></a>
+<pre><code>$ git config --list
+</code></pre>
+<a class="header" href="#show-repository-configuration" id="show-repository-configuration"><h5>Show repository configuration:</h5></a>
+<pre><code>$ git config --local --list
+</code></pre>
+<a class="header" href="#show-global-configuration" id="show-global-configuration"><h5>Show global configuration:</h5></a>
+<pre><code>$ git config --global --list
+</code></pre>
+<a class="header" href="#show-system-configuration" id="show-system-configuration"><h5>Show system configuration:</h5></a>
+<pre><code>$ git config --system --list
+</code></pre>
+<a class="header" href="#set-a-name-that-is-identifiable-for-credit-when-review-version-history" id="set-a-name-that-is-identifiable-for-credit-when-review-version-history"><h5>Set a name that is identifiable for credit when review version history:</h5></a>
+<pre><code>$ git config --global user.name “[firstname lastname]”
+</code></pre>
+<a class="header" href="#set-an-email-address-that-will-be-associated-with-each-history-marker" id="set-an-email-address-that-will-be-associated-with-each-history-marker"><h5>Set an email address that will be associated with each history marker:</h5></a>
+<pre><code>$ git config --global user.email “[valid-email]”
+</code></pre>
+<a class="header" href="#set-automatic-command-line-coloring-for-git-for-easy-reviewing" id="set-automatic-command-line-coloring-for-git-for-easy-reviewing"><h5>Set automatic command line coloring for Git for easy reviewing:</h5></a>
+<pre><code>$ git config --global color.ui auto
+</code></pre>
+<a class="header" href="#set-global-editor-for-commit" id="set-global-editor-for-commit"><h5>Set global editor for commit</h5></a>
+<pre><code>$ git config --global core.editor vi
+</code></pre>
+<hr>
+<a class="header" href="#configuration-files" id="configuration-files"><h2>Configuration Files</h2></a>
+<a class="header" href="#repository-specific-configuration-file---local" id="repository-specific-configuration-file---local"><h5>Repository specific configuration file [--local]:</h5></a>
+<pre><code>&lt;repo&gt;/.git/config
+</code></pre>
+<a class="header" href="#user-specific-configuration-file---global" id="user-specific-configuration-file---global"><h5>User-specific configuration file [--global]:</h5></a>
+<pre><code>~/.gitconfig
+</code></pre>
+<a class="header" href="#system-wide-configuration-file---system" id="system-wide-configuration-file---system"><h5>System-wide configuration file [--system]:</h5></a>
+<pre><code>/etc/gitconfig
+</code></pre>
+<hr>
+<a class="header" href="#create" id="create"><h2>Create</h2></a>
+<a class="header" href="#clone-an-existing-repository" id="clone-an-existing-repository"><h5>Clone an existing repository:</h5></a>
+<p>There are two ways:</p>
+<p>Via SSH</p>
+<pre><code>$ git clone ssh://user@domain.com/repo.git
+</code></pre>
+<p>Via HTTP</p>
+<pre><code>$ git clone http://domain.com/user/repo.git
+</code></pre>
+<a class="header" href="#create-a-new-local-repository" id="create-a-new-local-repository"><h5>Create a new local repository:</h5></a>
+<pre><code>$ git init
+</code></pre>
+<hr>
+<a class="header" href="#local-changes" id="local-changes"><h2>Local Changes</h2></a>
+<a class="header" href="#changes-in-working-directory" id="changes-in-working-directory"><h5>Changes in working directory:</h5></a>
+<pre><code>$ git status
+</code></pre>
+<a class="header" href="#changes-to-tracked-files" id="changes-to-tracked-files"><h5>Changes to tracked files:</h5></a>
+<pre><code>$ git diff
+</code></pre>
+<a class="header" href="#see-changesdifference-of-a-specific-file" id="see-changesdifference-of-a-specific-file"><h5>See changes/difference of a specific file:</h5></a>
+<pre><code>$ git diff &lt;file&gt;
+</code></pre>
+<a class="header" href="#add-all-current-changes-to-the-next-commit" id="add-all-current-changes-to-the-next-commit"><h5>Add all current changes to the next commit:</h5></a>
+<pre><code>$ git add .
+</code></pre>
+<a class="header" href="#add-some-changes-in-file-to-the-next-commit" id="add-some-changes-in-file-to-the-next-commit"><h5>Add some changes in <file> to the next commit:</h5></a>
+<pre><code>$ git add -p &lt;file&gt;
+</code></pre>
+<a class="header" href="#commit-all-local-changes-in-tracked-files" id="commit-all-local-changes-in-tracked-files"><h5>Commit all local changes in tracked files:</h5></a>
+<pre><code>$ git commit -a
+</code></pre>
+<a class="header" href="#commit-previously-staged-changes" id="commit-previously-staged-changes"><h5>Commit previously staged changes:</h5></a>
+<pre><code>$ git commit
+</code></pre>
+<a class="header" href="#commit-with-message" id="commit-with-message"><h5>Commit with message:</h5></a>
+<pre><code>$ git commit -m 'message here'
+</code></pre>
+<a class="header" href="#commit-skipping-the-staging-area-and-adding-message" id="commit-skipping-the-staging-area-and-adding-message"><h5>Commit skipping the staging area and adding message:</h5></a>
+<pre><code>$ git commit -am 'message here'
+</code></pre>
+<a class="header" href="#commit-to-some-previous-date" id="commit-to-some-previous-date"><h5>Commit to some previous date:</h5></a>
+<pre><code>$ git commit --date=&quot;`date --date='n day ago'`&quot; -am &quot;&lt;Commit Message Here&gt;&quot;
+</code></pre>
+<a class="header" href="#change-last-commitbr" id="change-last-commitbr"><h5>Change last commit:<br></h5></a>
+<p><em><sub>Don't amend published commits!</sub></em></p>
+<pre><code>$ git commit -a --amend
+</code></pre>
+<a class="header" href="#amend-with-last-commit-but-use-the-previous-commit-log-message" id="amend-with-last-commit-but-use-the-previous-commit-log-message"><h5>Amend with last commit but use the previous commit log message</h5></a>
+<p><em><sub>Don't amend published commits!</sub></em></p>
+<pre><code class="language-shell">$ git commit --amend --no-edit
+</code></pre>
+<a class="header" href="#change-committer-date-of-last-commit" id="change-committer-date-of-last-commit"><h5>Change committer date of last commit:</h5></a>
+<pre><code>GIT_COMMITTER_DATE=&quot;date&quot; git commit --amend
+</code></pre>
+<a class="header" href="#change-author-date-of-last-commit" id="change-author-date-of-last-commit"><h5>Change Author date of last commit:</h5></a>
+<pre><code class="language-shell">$ git commit --amend --date=&quot;date&quot;
+</code></pre>
+<a class="header" href="#move-uncommitted-changes-from-current-branch-to-some-other-branchbr" id="move-uncommitted-changes-from-current-branch-to-some-other-branchbr"><h5>Move uncommitted changes from current branch to some other branch:<br></h5></a>
+<pre><code>$ git stash
+$ git checkout branch2
+$ git stash pop
+</code></pre>
+<a class="header" href="#restore-stashed-changes-back-to-current-branch" id="restore-stashed-changes-back-to-current-branch"><h5>Restore stashed changes back to current branch:</h5></a>
+<pre><code class="language-shell">$ git stash apply
+</code></pre>
+<a class="header" href="#restore-particular-stash-back-to-current-branch" id="restore-particular-stash-back-to-current-branch"><h4>Restore particular stash back to current branch:</h4></a>
+<ul>
+<li><em>{stash_number}</em> can be obtained from <code>git stash list</code></li>
+</ul>
+<pre><code class="language-shell">$ git stash apply stash@{stash_number}
+</code></pre>
+<a class="header" href="#remove-the-last-set-of-stashed-changes" id="remove-the-last-set-of-stashed-changes"><h5>Remove the last set of stashed changes:</h5></a>
+<pre><code>$ git stash drop
+</code></pre>
+<hr>
+<a class="header" href="#search" id="search"><h2>Search</h2></a>
+<a class="header" href="#a-text-search-on-all-files-in-the-directory" id="a-text-search-on-all-files-in-the-directory"><h5>A text search on all files in the directory:</h5></a>
+<pre><code>$ git grep &quot;Hello&quot;
+</code></pre>
+<a class="header" href="#in-any-version-of-a-text-search" id="in-any-version-of-a-text-search"><h5>In any version of a text search:</h5></a>
+<pre><code>$ git grep &quot;Hello&quot; v2.5
+</code></pre>
+<hr>
+<a class="header" href="#commit-history" id="commit-history"><h2>Commit History</h2></a>
+<a class="header" href="#show-all-commits-starting-with-newest-itll-show-the-hash-author-information-date-of-commit-and-title-of-the-commit" id="show-all-commits-starting-with-newest-itll-show-the-hash-author-information-date-of-commit-and-title-of-the-commit"><h5>Show all commits, starting with newest (it'll show the hash, author information, date of commit and title of the commit):</h5></a>
+<pre><code>$ git log
+</code></pre>
+<a class="header" href="#show-all-the-commitsitll-show-just-the-commit-hash-and-the-commit-message" id="show-all-the-commitsitll-show-just-the-commit-hash-and-the-commit-message"><h5>Show all the commits(it'll show just the commit hash and the commit message):</h5></a>
+<pre><code>$ git log --oneline
+</code></pre>
+<a class="header" href="#show-all-commits-of-a-specific-user" id="show-all-commits-of-a-specific-user"><h5>Show all commits of a specific user:</h5></a>
+<pre><code>$ git log --author=&quot;username&quot;
+</code></pre>
+<a class="header" href="#show-changes-over-time-for-a-specific-file" id="show-changes-over-time-for-a-specific-file"><h5>Show changes over time for a specific file:</h5></a>
+<pre><code>$ git log -p &lt;file&gt;
+</code></pre>
+<a class="header" href="#display-commits-that-are-present-only-in-remotebranch-in-right-side" id="display-commits-that-are-present-only-in-remotebranch-in-right-side"><h5>Display commits that are present only in remote/branch in right side</h5></a>
+<pre><code>$ git log --oneline &lt;origin/master&gt;..&lt;remote/master&gt; --left-right
+</code></pre>
+<a class="header" href="#who-changed-what-and-when-in-file" id="who-changed-what-and-when-in-file"><h5>Who changed, what and when in <file>:</h5></a>
+<pre><code>$ git blame &lt;file&gt;
+</code></pre>
+<a class="header" href="#show-reference-log" id="show-reference-log"><h5>Show Reference log:</h5></a>
+<pre><code>$ git reflog show
+</code></pre>
+<a class="header" href="#delete-reference-log" id="delete-reference-log"><h5>Delete Reference log:</h5></a>
+<pre><code>$ git reflog delete
+</code></pre>
+<hr>
+<a class="header" href="#branches--tags" id="branches--tags"><h2>Branches &amp; Tags</h2></a>
+<a class="header" href="#list-all-local-branches" id="list-all-local-branches"><h5>List all local branches:</h5></a>
+<pre><code>$ git branch
+</code></pre>
+<a class="header" href="#list-localremote-branches" id="list-localremote-branches"><h4>List local/remote branches</h4></a>
+<pre><code>$ git branch -a
+</code></pre>
+<a class="header" href="#list-all-remote-branches" id="list-all-remote-branches"><h5>List all remote branches:</h5></a>
+<pre><code>$ git branch -r
+</code></pre>
+<a class="header" href="#switch-head-branch" id="switch-head-branch"><h5>Switch HEAD branch:</h5></a>
+<pre><code>$ git checkout &lt;branch&gt;
+</code></pre>
+<a class="header" href="#checkout-single-file-from-different-branch" id="checkout-single-file-from-different-branch"><h5>Checkout single file from different branch</h5></a>
+<pre><code>$ git checkout &lt;branch&gt; -- &lt;filename&gt;
+</code></pre>
+<a class="header" href="#create-and-switch-new-branch" id="create-and-switch-new-branch"><h5>Create and switch new branch:</h5></a>
+<pre><code>$ git checkout -b &lt;branch&gt;
+</code></pre>
+<a class="header" href="#create-a-new-branch-from-an-exiting-branch-and-switch-to-new-branch" id="create-a-new-branch-from-an-exiting-branch-and-switch-to-new-branch"><h5>Create a new branch from an exiting branch and switch to new branch:</h5></a>
+<pre><code>$ git checkout -b &lt;new_branch&gt; &lt;existing_branch&gt;
+</code></pre>
+<a class="header" href="#checkout-and-create-a-new-branch-from-existing-commit" id="checkout-and-create-a-new-branch-from-existing-commit"><h4>Checkout and create a new branch from existing commit</h4></a>
+<pre><code>$ git checkout &lt;commit-hash&gt; -b &lt;new_branch_name&gt;
+</code></pre>
+<a class="header" href="#create-a-new-branch-based-on-your-current-head" id="create-a-new-branch-based-on-your-current-head"><h5>Create a new branch based on your current HEAD:</h5></a>
+<pre><code>$ git branch &lt;new-branch&gt;
+</code></pre>
+<a class="header" href="#create-a-new-tracking-branch-based-on-a-remote-branch" id="create-a-new-tracking-branch-based-on-a-remote-branch"><h5>Create a new tracking branch based on a remote branch:</h5></a>
+<pre><code>$ git branch --track &lt;new-branch&gt; &lt;remote-branch&gt;
+</code></pre>
+<a class="header" href="#delete-a-local-branch" id="delete-a-local-branch"><h5>Delete a local branch:</h5></a>
+<pre><code>$ git branch -d &lt;branch&gt;
+</code></pre>
+<a class="header" href="#rename-current-branch-to-new-branch-name" id="rename-current-branch-to-new-branch-name"><h5>Rename current branch to new branch name</h5></a>
+<pre><code class="language-shell">$ git branch -m &lt;new_branch_name&gt;
+</code></pre>
+<a class="header" href="#force-delete-a-local-branch" id="force-delete-a-local-branch"><h5>Force delete a local branch:</h5></a>
+<p><em><sub>You will lose unmerged changes!</sub></em></p>
+<pre><code>$ git branch -D &lt;branch&gt;
+</code></pre>
+<a class="header" href="#mark-the-current-commit-with-a-tag" id="mark-the-current-commit-with-a-tag"><h5>Mark the current commit with a tag:</h5></a>
+<pre><code>$ git tag &lt;tag-name&gt;
+</code></pre>
+<a class="header" href="#mark-the-current-commit-with-a-tag-that-includes-a-message" id="mark-the-current-commit-with-a-tag-that-includes-a-message"><h5>Mark the current commit with a tag that includes a message:</h5></a>
+<pre><code>$ git tag -a &lt;tag-name&gt;
+</code></pre>
+<hr>
+<a class="header" href="#update--publish" id="update--publish"><h2>Update &amp; Publish</h2></a>
+<a class="header" href="#list-all-current-configured-remotes" id="list-all-current-configured-remotes"><h5>List all current configured remotes:</h5></a>
+<pre><code>$ git remote -v
+</code></pre>
+<a class="header" href="#show-information-about-a-remote" id="show-information-about-a-remote"><h5>Show information about a remote:</h5></a>
+<pre><code>$ git remote show &lt;remote&gt;
+</code></pre>
+<a class="header" href="#add-new-remote-repository-named-remote" id="add-new-remote-repository-named-remote"><h5>Add new remote repository, named <remote>:</h5></a>
+<pre><code>$ git remote add &lt;remote&gt; &lt;url&gt;
+</code></pre>
+<a class="header" href="#download-all-changes-from-remote-but-dont-integrate-into-head" id="download-all-changes-from-remote-but-dont-integrate-into-head"><h5>Download all changes from <remote>, but don't integrate into HEAD:</h5></a>
+<pre><code>$ git fetch &lt;remote&gt;
+</code></pre>
+<a class="header" href="#download-changes-and-directly-mergeintegrate-into-head" id="download-changes-and-directly-mergeintegrate-into-head"><h5>Download changes and directly merge/integrate into HEAD:</h5></a>
+<pre><code>$ git remote pull &lt;remote&gt; &lt;url&gt;
+</code></pre>
+<a class="header" href="#get-all-changes-from-head-to-local-repository" id="get-all-changes-from-head-to-local-repository"><h5>Get all changes from HEAD to local repository:</h5></a>
+<pre><code>$ git pull origin master
+</code></pre>
+<a class="header" href="#get-all-changes-from-head-to-local-repository-without-a-merge" id="get-all-changes-from-head-to-local-repository-without-a-merge"><h5>Get all changes from HEAD to local repository without a merge:</h5></a>
+<pre><code>$ git pull --rebase &lt;remote&gt; &lt;branch&gt;
+</code></pre>
+<a class="header" href="#publish-local-changes-on-a-remote" id="publish-local-changes-on-a-remote"><h5>Publish local changes on a remote:</h5></a>
+<pre><code>$ git push remote &lt;remote&gt; &lt;branch&gt;
+</code></pre>
+<a class="header" href="#delete-a-branch-on-the-remote" id="delete-a-branch-on-the-remote"><h5>Delete a branch on the remote:</h5></a>
+<pre><code>$ git push &lt;remote&gt; :&lt;branch&gt; (since Git v1.5.0)
+</code></pre>
+<p>OR</p>
+<pre><code>$ git push &lt;remote&gt; --delete &lt;branch&gt; (since Git v1.7.0)
+</code></pre>
+<a class="header" href="#publish-your-tags" id="publish-your-tags"><h5>Publish your tags:</h5></a>
+<pre><code>$ git push --tags
+</code></pre>
+<hr>
+<a class="header" href="#configure-the-merge-tool-globally-to-meld-editor" id="configure-the-merge-tool-globally-to-meld-editor"><h4>Configure the merge tool globally to meld (editor)</h4></a>
+<pre><code class="language-bash">$ git config --global merge.tool meld
+</code></pre>
+<a class="header" href="#use-your-configured-merge-tool-to-solve-conflicts" id="use-your-configured-merge-tool-to-solve-conflicts"><h5>Use your configured merge tool to solve conflicts:</h5></a>
+<pre><code>$ git mergetool
+</code></pre>
+<a class="header" href="#merge--rebase" id="merge--rebase"><h2>Merge &amp; Rebase</h2></a>
+<a class="header" href="#merge-branch-into-your-current-head" id="merge-branch-into-your-current-head"><h5>Merge branch into your current HEAD:</h5></a>
+<pre><code>$ git merge &lt;branch&gt;
+</code></pre>
+<a class="header" href="#rebase-your-current-head-onto-branchbr" id="rebase-your-current-head-onto-branchbr"><h5>Rebase your current HEAD onto <branch>:<br></h5></a>
+<p><em><sub>Don't rebase published commit!</sub></em></p>
+<pre><code>$ git rebase &lt;branch&gt;
+</code></pre>
+<a class="header" href="#abort-a-rebase" id="abort-a-rebase"><h5>Abort a rebase:</h5></a>
+<pre><code>$ git rebase --abort
+</code></pre>
+<a class="header" href="#continue-a-rebase-after-resolving-conflicts" id="continue-a-rebase-after-resolving-conflicts"><h5>Continue a rebase after resolving conflicts:</h5></a>
+<pre><code>$ git rebase --continue
+</code></pre>
+<a class="header" href="#use-your-editor-to-manually-solve-conflicts-and-after-resolving-mark-file-as-resolved" id="use-your-editor-to-manually-solve-conflicts-and-after-resolving-mark-file-as-resolved"><h5>Use your editor to manually solve conflicts and (after resolving) mark file as resolved:</h5></a>
+<pre><code>$ git add &lt;resolved-file&gt;
+</code></pre>
+<pre><code>$ git rm &lt;resolved-file&gt;
+</code></pre>
+<a class="header" href="#squashing-commits" id="squashing-commits"><h5>Squashing commits:</h5></a>
+<pre><code>$ git rebase -i &lt;commit-just-before-first&gt;
+</code></pre>
+<p>Now replace this,</p>
+<pre><code>pick &lt;commit_id&gt;
+pick &lt;commit_id2&gt;
+pick &lt;commit_id3&gt;
+</code></pre>
+<p>to this,</p>
+<pre><code>pick &lt;commit_id&gt;
+squash &lt;commit_id2&gt;
+squash &lt;commit_id3&gt;
+</code></pre>
+<hr>
+<a class="header" href="#undo" id="undo"><h2>Undo</h2></a>
+<a class="header" href="#discard-all-local-changes-in-your-working-directory" id="discard-all-local-changes-in-your-working-directory"><h5>Discard all local changes in your working directory:</h5></a>
+<pre><code>$ git reset --hard HEAD
+</code></pre>
+<a class="header" href="#get-all-the-files-out-of-the-staging-areaie-undo-the-last-git-add" id="get-all-the-files-out-of-the-staging-areaie-undo-the-last-git-add"><h5>Get all the files out of the staging area(i.e. undo the last <code>git add</code>):</h5></a>
+<pre><code>$ git reset HEAD
+</code></pre>
+<a class="header" href="#discard-local-changes-in-a-specific-file" id="discard-local-changes-in-a-specific-file"><h5>Discard local changes in a specific file:</h5></a>
+<pre><code>$ git checkout HEAD &lt;file&gt;
+</code></pre>
+<a class="header" href="#revert-a-commit-by-producing-a-new-commit-with-contrary-changes" id="revert-a-commit-by-producing-a-new-commit-with-contrary-changes"><h5>Revert a commit (by producing a new commit with contrary changes):</h5></a>
+<pre><code>$ git revert &lt;commit&gt;
+</code></pre>
+<a class="header" href="#reset-your-head-pointer-to-a-previous-commit-and-discard-all-changes-since-then" id="reset-your-head-pointer-to-a-previous-commit-and-discard-all-changes-since-then"><h5>Reset your HEAD pointer to a previous commit and discard all changes since then:</h5></a>
+<pre><code>$ git reset --hard &lt;commit&gt;
+</code></pre>
+<a class="header" href="#reset-your-head-pointer-to-a-remote-branch-current-state" id="reset-your-head-pointer-to-a-remote-branch-current-state"><h5>Reset your HEAD pointer to a remote branch current state.</h5></a>
+<pre><code>$ git reset --hard &lt;remote/branch&gt; e.g., upstream/master, origin/my-feature
+</code></pre>
+<a class="header" href="#reset-your-head-pointer-to-a-previous-commit-and-preserve-all-changes-as-unstaged-changes" id="reset-your-head-pointer-to-a-previous-commit-and-preserve-all-changes-as-unstaged-changes"><h5>Reset your HEAD pointer to a previous commit and preserve all changes as unstaged changes:</h5></a>
+<pre><code>$ git reset &lt;commit&gt;
+</code></pre>
+<a class="header" href="#reset-your-head-pointer-to-a-previous-commit-and-preserve-uncommitted-local-changes" id="reset-your-head-pointer-to-a-previous-commit-and-preserve-uncommitted-local-changes"><h5>Reset your HEAD pointer to a previous commit and preserve uncommitted local changes:</h5></a>
+<pre><code>$ git reset --keep &lt;commit&gt;
+</code></pre>
+<a class="header" href="#remove-files-that-were-accidentally-committed-before-they-were-added-to-gitignore" id="remove-files-that-were-accidentally-committed-before-they-were-added-to-gitignore"><h5>Remove files that were accidentally committed before they were added to .gitignore</h5></a>
+<pre><code>$ git rm -r --cached .
+$ git add .
+$ git commit -m &quot;remove xyz file&quot;
+</code></pre>
+<hr>
+<a class="header" href="#git-flow" id="git-flow"><h2>Git-Flow</h2></a>
+<p>Improved <a href="https://github.com/petervanderdoes/gitflow-avh">Git-flow</a></p>
+<a class="header" href="#index-1" id="index-1"><h3>Index</h3></a>
+<ul>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#make-a-release">Make a Release</a></li>
+<li><a href="#hotfixes">Hotfixes</a></li>
+<li><a href="#commands">Commands</a></li>
+</ul>
+<hr>
+<a class="header" href="#setup-1" id="setup-1"><h3>Setup</h3></a>
+<a class="header" href="#you-need-a-working-git-installation-as-prerequisite-git-flow-works-on-osx-linux-and-windows" id="you-need-a-working-git-installation-as-prerequisite-git-flow-works-on-osx-linux-and-windows"><h6>You need a working git installation as prerequisite. Git flow works on OSX, Linux and Windows.</h6></a>
+<a class="header" href="#osx-homebrew" id="osx-homebrew"><h5>OSX Homebrew:</h5></a>
+<pre><code>$ brew install git-flow-avh
+</code></pre>
+<a class="header" href="#osx-macports" id="osx-macports"><h5>OSX Macports:</h5></a>
+<pre><code>$ port install git-flow
+</code></pre>
+<a class="header" href="#linux-debian-based" id="linux-debian-based"><h5>Linux (Debian-based):</h5></a>
+<pre><code>$ sudo apt-get install git-flow
+</code></pre>
+<a class="header" href="#windows-cygwin" id="windows-cygwin"><h5>Windows (Cygwin):</h5></a>
+<a class="header" href="#you-need-wget-and-util-linux-to-install-git-flow" id="you-need-wget-and-util-linux-to-install-git-flow"><h6>You need wget and util-linux to install git-flow.</h6></a>
+<pre><code class="language-bash">$ wget -q -O - --no-check-certificate https://raw.githubusercontent.com/petervanderdoes/gitflow/develop/contrib/gitflow-installer.sh install &lt;state&gt; | bash
+</code></pre>
+<hr>
+<a class="header" href="#getting-started" id="getting-started"><h3>Getting Started</h3></a>
+<a class="header" href="#git-flow-needs-to-be-initialized-in-order-to-customize-your-project-setup-start-using-git-flow-by-initializing-it-inside-an-existing-git-repository" id="git-flow-needs-to-be-initialized-in-order-to-customize-your-project-setup-start-using-git-flow-by-initializing-it-inside-an-existing-git-repository"><h6>Git flow needs to be initialized in order to customize your project setup. Start using git-flow by initializing it inside an existing git repository:</h6></a>
+<a class="header" href="#initialize" id="initialize"><h5>Initialize:</h5></a>
+<a class="header" href="#youll-have-to-answer-a-few-questions-regarding-the-naming-conventions-for-your-branches-its-recommended-to-use-the-default-values" id="youll-have-to-answer-a-few-questions-regarding-the-naming-conventions-for-your-branches-its-recommended-to-use-the-default-values"><h6>You'll have to answer a few questions regarding the naming conventions for your branches. It's recommended to use the default values.</h6></a>
+<pre><code class="language-shell">git flow init
+</code></pre>
+<p>OR</p>
+<a class="header" href="#to-use-default" id="to-use-default"><h6>To use default</h6></a>
+<pre><code class="language-shell">git flow init -d
+</code></pre>
+<hr>
+<a class="header" href="#features" id="features"><h3>Features</h3></a>
+<a class="header" href="#develop-new-features-for-upcoming-releases-typically-exist-in-developers-repos-only" id="develop-new-features-for-upcoming-releases-typically-exist-in-developers-repos-only"><h6>Develop new features for upcoming releases. Typically exist in developers repos only.</h6></a>
+<a class="header" href="#start-a-new-feature" id="start-a-new-feature"><h5>Start a new feature:</h5></a>
+<a class="header" href="#this-action-creates-a-new-feature-branch-based-on-develop-and-switches-to-it" id="this-action-creates-a-new-feature-branch-based-on-develop-and-switches-to-it"><h6>This action creates a new feature branch based on 'develop' and switches to it.</h6></a>
+<pre><code>git flow feature start MYFEATURE
+</code></pre>
+<a class="header" href="#finish-up-a-feature" id="finish-up-a-feature"><h5>Finish up a feature:</h5></a>
+<a class="header" href="#finish-the-development-of-a-feature-this-action-performs-the-following" id="finish-the-development-of-a-feature-this-action-performs-the-following"><h6>Finish the development of a feature. This action performs the following:</h6></a>
+<a class="header" href="#a1-merged-myfeature-into-develop" id="a1-merged-myfeature-into-develop"><h6>1) Merged MYFEATURE into 'develop'.</h6></a>
+<a class="header" href="#a2-removes-the-feature-branch" id="a2-removes-the-feature-branch"><h6>2) Removes the feature branch.</h6></a>
+<a class="header" href="#a3-switches-back-to-develop-branch" id="a3-switches-back-to-develop-branch"><h6>3) Switches back to 'develop' branch</h6></a>
+<pre><code>git flow feature finish MYFEATURE
+</code></pre>
+<a class="header" href="#publish-a-feature" id="publish-a-feature"><h5>Publish a feature:</h5></a>
+<a class="header" href="#are-you-developing-a-feature-in-collaboration-publish-a-feature-to-the-remote-server-so-it-can-be-used-by-other-users" id="are-you-developing-a-feature-in-collaboration-publish-a-feature-to-the-remote-server-so-it-can-be-used-by-other-users"><h6>Are you developing a feature in collaboration? Publish a feature to the remote server so it can be used by other users.</h6></a>
+<pre><code>git flow feature publish MYFEATURE
+</code></pre>
+<a class="header" href="#getting-a-published-feature" id="getting-a-published-feature"><h5>Getting a published feature:</h5></a>
+<a class="header" href="#get-a-feature-published-by-another-user" id="get-a-feature-published-by-another-user"><h6>Get a feature published by another user.</h6></a>
+<pre><code>git flow feature pull origin MYFEATURE
+</code></pre>
+<a class="header" href="#tracking-a-origin-feature" id="tracking-a-origin-feature"><h5>Tracking a origin feature:</h5></a>
+<a class="header" href="#you-can-track-a-feature-on-origin-by-using" id="you-can-track-a-feature-on-origin-by-using"><h6>You can track a feature on origin by using</h6></a>
+<pre><code>git flow feature track MYFEATURE
+</code></pre>
+<hr>
+<a class="header" href="#make-a-release" id="make-a-release"><h3>Make a Release</h3></a>
+<a class="header" href="#support-preparation-of-a-new-production-release-allow-for-minor-bug-fixes-and-preparing-meta-data-for-a-release" id="support-preparation-of-a-new-production-release-allow-for-minor-bug-fixes-and-preparing-meta-data-for-a-release"><h6>Support preparation of a new production release. Allow for minor bug fixes and preparing meta-data for a release</h6></a>
+<a class="header" href="#start-a-release" id="start-a-release"><h5>Start a release:</h5></a>
+<a class="header" href="#to-start-a-release-use-the-git-flow-release-command-it-creates-a-release-branch-created-from-the-develop-branch-you-can-optionally-supply-a-base-commit-sha-1-hash-to-start-the-release-from-the-commit-must-be-on-the-develop-branch" id="to-start-a-release-use-the-git-flow-release-command-it-creates-a-release-branch-created-from-the-develop-branch-you-can-optionally-supply-a-base-commit-sha-1-hash-to-start-the-release-from-the-commit-must-be-on-the-develop-branch"><h6>To start a release, use the git flow release command. It creates a release branch created from the 'develop' branch. You can optionally supply a [BASE] commit sha-1 hash to start the release from. The commit must be on the 'develop' branch.</h6></a>
+<pre><code>git flow release start RELEASE [BASE]
+</code></pre>
+<a class="header" href="#its-wise-to-publish-the-release-branch-after-creating-it-to-allow-release-commits-by-other-developers-do-it-similar-to-feature-publishing-with-the-command" id="its-wise-to-publish-the-release-branch-after-creating-it-to-allow-release-commits-by-other-developers-do-it-similar-to-feature-publishing-with-the-command"><h6>It's wise to publish the release branch after creating it to allow release commits by other developers. Do it similar to feature publishing with the command:</h6></a>
+<pre><code>git flow release publish RELEASE
+</code></pre>
+<a class="header" href="#you-can-track-a-remote-release-with-the-git-flow-release-track-release-command" id="you-can-track-a-remote-release-with-the-git-flow-release-track-release-command"><h6>(You can track a remote release with the: <code>git flow release track RELEASE</code> command)</h6></a>
+<a class="header" href="#finish-up-a-release" id="finish-up-a-release"><h5>Finish up a release:</h5></a>
+<a class="header" href="#finishing-a-release-is-one-of-the-big-steps-in-git-branching-it-performs-several-actions" id="finishing-a-release-is-one-of-the-big-steps-in-git-branching-it-performs-several-actions"><h6>Finishing a release is one of the big steps in git branching. It performs several actions:</h6></a>
+<a class="header" href="#a1-merges-the-release-branch-back-into-master" id="a1-merges-the-release-branch-back-into-master"><h6>1) Merges the release branch back into 'master'</h6></a>
+<a class="header" href="#a2-tags-the-release-with-its-name" id="a2-tags-the-release-with-its-name"><h6>2) Tags the release with its name</h6></a>
+<a class="header" href="#a3-back-merges-the-release-into-develop" id="a3-back-merges-the-release-into-develop"><h6>3) Back-merges the release into 'develop'</h6></a>
+<a class="header" href="#a4-removes-the-release-branch" id="a4-removes-the-release-branch"><h6>4) Removes the release branch</h6></a>
+<pre><code>git flow release finish RELEASE
+</code></pre>
+<a class="header" href="#dont-forget-to-push-your-tags-with-git-push---tags" id="dont-forget-to-push-your-tags-with-git-push---tags"><h6>Don't forget to push your tags with <code>git push --tags</code></h6></a>
+<hr>
+<a class="header" href="#hotfixes" id="hotfixes"><h3>Hotfixes</h3></a>
+<a class="header" href="#hotfixes-arise-from-the-necessity-to-act-immediately-upon-an-undesired-state-of-a-live-production-version-may-be-branched-off-from-the-corresponding-tag-on-the-master-branch-that-marks-the-production-version" id="hotfixes-arise-from-the-necessity-to-act-immediately-upon-an-undesired-state-of-a-live-production-version-may-be-branched-off-from-the-corresponding-tag-on-the-master-branch-that-marks-the-production-version"><h6>Hotfixes arise from the necessity to act immediately upon an undesired state of a live production version. May be branched off from the corresponding tag on the master branch that marks the production version.</h6></a>
+<a class="header" href="#git-flow-hotfix-start" id="git-flow-hotfix-start"><h5>Git flow hotfix start:</h5></a>
+<a class="header" href="#like-the-other-git-flow-commands-a-hotfix-is-started-with" id="like-the-other-git-flow-commands-a-hotfix-is-started-with"><h6>Like the other git flow commands, a hotfix is started with</h6></a>
+<pre><code>$ git flow hotfix start VERSION [BASENAME]
+</code></pre>
+<a class="header" href="#the-version-argument-hereby-marks-the-new-hotfix-release-name-optionally-you-can-specify-a-basename-to-start-from" id="the-version-argument-hereby-marks-the-new-hotfix-release-name-optionally-you-can-specify-a-basename-to-start-from"><h6>The version argument hereby marks the new hotfix release name. Optionally you can specify a basename to start from.</h6></a>
+<a class="header" href="#finish-a-hotfix" id="finish-a-hotfix"><h5>Finish a hotfix:</h5></a>
+<a class="header" href="#by-finishing-a-hotfix-it-gets-merged-back-into-develop-and-master-additionally-the-master-merge-is-tagged-with-the-hotfix-version" id="by-finishing-a-hotfix-it-gets-merged-back-into-develop-and-master-additionally-the-master-merge-is-tagged-with-the-hotfix-version"><h6>By finishing a hotfix it gets merged back into develop and master. Additionally the master merge is tagged with the hotfix version</h6></a>
+<pre><code>git flow hotfix finish VERSION
+</code></pre>
+<hr>
+<a class="header" href="#commands" id="commands"><h3>Commands</h3></a>
+<p align="center">
+    <img alt="Git" src="./Img/git-flow-commands.png" height="270" width="460">
+</p>
+<hr>
+<a class="header" href="#git-flow-schema" id="git-flow-schema"><h3>Git flow schema</h3></a>
+<p align="center">
+    <img alt="Git" src="Img/git-flow-commands-without-flow.png">
+</p>
+<hr>
+<a class="header" href="#automatesierung-mit-rfcs-verfahren" id="automatesierung-mit-rfcs-verfahren"><h1>Automatesierung mit RFCs-verfahren</h1></a>
+<p><em>Entwicklung</em> -&gt; <em>Production</em> -&gt; <em>Wartung</em></p>
+<a class="header" href="#einfuhrung-algemeine-informationen" id="einfuhrung-algemeine-informationen"><h2>Einfuhrung Algemeine Informationen</h2></a>
+<p>Die <code>Request for Comments</code> (<code>RFC</code> englisch für Bitte um Kommentare) sind eine Reihe technischer und organisatorischer Dokumente des RFC-Editors zum Internet (ursprünglich Arpanet), die am 7. April 1969 begonnen wurden. Bei der ersten Veröffentlichung noch im ursprünglichen Wortsinne zur Diskussion gestellt, behalten RFC auch dann ihren Namen, wenn sie sich durch allgemeine Akzeptanz und Gebrauch zum Standard entwickelt haben. Hingegen wird die fortlaufende Zählung (Nummerierung) der RFCs weitergeführt und eine neue RFC-Nummer vergeben, wenn eine abschließend geänderte Version durch eine neue Version, gegebenenfalls auch zusammengefasst aus mehreren Vorläufern und mit mehreren Ergänzungen versehen zu einem neuen Dokument zusammengeführt, abgelöst wird.</p>
+<p>@designvorschlag: <code>RFC Process</code>
+@bereich: <code>Verbesserungsvorshlage</code>
+@pull#n
+@font <code>Font Awesome 5 Pro</code></p>
+<p>Das Ziel</p>
+<ul>
+<li>Ubersicht</li>
+<li>Klare Regeln</li>
+<li>Automatesirung</li>
+<li>Planung</li>
+</ul>
+<p>Strukture</p>
+<blockquote>
+<p>Mogliche Probleme</p>
+<blockquote>
+<p>Es ist mir nicht eindeutlich klar warum jetzt plotztlich alle acurrat alle Blocke ausfullen sollten.
+Belonung schaffen: Vorschlag#1 <code>Eingeschaften</code></p>
+</blockquote>
+<p>Eingeschaften als eine art belonung und moglichkeit eine grossere Einfluss zu gewinnen.</p>
+</blockquote>
+<p>Alle mogliche Eingeschaften  kurz eklart.</p>
+<ul>
+<li>
+<p> Documentation - Text aus diesem Bereich wird bei freigabe automatisch in die Dokumentation uberfuehrt.</p>
+</li>
+<li>
+<p> Label - Sortierung,Plannung.</p>
+</li>
+<li>
+<p> Diskussion - Wird in Process weiter bearbeitet.</p>
+</li>
+<li>
+<p> Entscheidungsvorteile - Verbessert die Chancen auf eine positive Entscheidung.</p>
+</li>
+<li>
+<p> Entscheidungsrelevant - Kernbereich, Keine unvollstandigen Angaben empfohlen. Folge - wird nicht in Diskussionrunde zugelassen.</p>
+</li>
+<li>
+<p> Prioritat kann nur addiert werden.</p>
+</li>
+<li>
+<p>Datum: #pull-date</p>
+</li>
+<li>
+<p>Pull Request: #pull-request</p>
+</li>
+<li>
+<p>Issue: #git-issue</p>
+</li>
+</ul>
+<a class="header" href="#zusammenfassung" id="zusammenfassung"><h1>Zusammenfassung</h1></a>
+<p>Wo ?
+{feature}/motivation.md</p>
+<p>Kurze inhaltliche Zusammenfassung der Funktion.</p>
+<ul>
+<li> Label</li>
+<li> Entscheidungsrelevant</li>
+</ul>
+<a class="header" href="#motivation" id="motivation"><h1>Motivation</h1></a>
+<p>Warum tun wir das? Wo wird das benutzt? Welcher Anwendungsfall wird damit unterstutzt, moglicheweise werbessert? Welches positive Ergebnis wird erwartet?</p>
+<ul>
+<li> Entscheidungsrelevant</li>
+<li> Priorität</li>
+</ul>
+<a class="header" href="#benutzungsanweisung" id="benutzungsanweisung"><h1>Benutzungsanweisung</h1></a>
+<p>In diesem Teil geht um weitgehende Beschreibung mit dem Fokus auf reale Anwendung und interne-externe Schulung.
+Es wird angenomment dass die Funktion ist schon fertig ist.</p>
+<ul>
+<li>Production und Endtestanweisung.</li>
+<li>Schulung.</li>
+<li>Umrustung oder Upgrade</li>
+<li>Mogliche Ausfalle ( Finden und Beseitigen)</li>
+</ul>
+<p>Eingeschaften</p>
+<ul>
+<li> Documentation</li>
+<li> Diskussion</li>
+<li> Label</li>
+<li> Entscheidungsvorteile</li>
+</ul>
+<a class="header" href="#techniche-dokumentation" id="techniche-dokumentation"><h1>Techniche Dokumentation</h1></a>
+<p>In diesem Block geht um weitgeende technische Beschreibung der neuen Funktion mit Fokus aud die Realisierung.</p>
+<p>Eingeschaften</p>
+<ul>
+<li> Documentation</li>
+<li> Label</li>
+<li> Diskussion</li>
+<li> Entscheidungsvorteile</li>
+</ul>
+<a class="header" href="#nachteile" id="nachteile"><h1>Nachteile</h1></a>
+<pre><code class="language-rfcbot">
+ Warum sollen wir das beeser nicht tun?
+
+Eingeschaften
+*  Entscheidungsvorteile
+*  Diskussion
+
+</code></pre>
+<a class="header" href="#begrundung-und-alternativen" id="begrundung-und-alternativen"><h1>Begrundung und Alternativen</h1></a>
+<pre><code class="language-rfcbot">
+ Zwerk die Entscheidung und Prioritat.
+ Suche nach mogliche Alternatieven.Hilfreich ware zu wissen wie tatsachlich wir das brauchen was wir machren.
+ * Warum ist das genau richtige Losung.
+ * Welche Auswirkung wird erwartet, falls wir das nicht machen.
+
+Eingeschaften
+*  Priorität
+*  Entscheidungsvorteile
+
+</code></pre>
+<a class="header" href="#prior-art" id="prior-art"><h1>Prior art</h1></a>
+<pre><code class="language-rfdbot">
+Falls es eine Disskusion statfand, soll es hier moglicht detaliert abbgebildet.
+ * Protocol oder ein [Link].
+ * Prioritet wurde gesetzt oder geandert.
+
+Eingeshaften
+*  Diskussion
+*  Labels
+*  Entscheidungsvorteile
+*  Priorität
+
+</code></pre>
+<a class="header" href="#offene-fragen" id="offene-fragen"><h1>Offene Fragen</h1></a>
+<pre><code class="language-rfcbot">
+
+</code></pre>
+<a class="header" href="#motivation-1" id="motivation-1"><h1>Motivation</h1></a>
+<p><strong>☑todo:Entwurf sind vile offene Punkten</strong></p>
+<blockquote>
+<p>Dokument befindet noch in Entwicklung</p>
+</blockquote>
+<!-- > [RFC-Designdocument](rfc.md#motivation) . -->
+> Grunde fuer eile?
+> Es ist mir gerade schwer direkt zu schreiben, wiel eigentliche Ziel noch nicht ganz durchschaubar.
+<p>Aus die Zeitgrunden werden hier vile einzelne Projekten zusammengefasst. Das macht einege schwirigkeiten dieses Block zu verfassen.
+Trotzdem versuchen wir daraus etwas machen. Und die mogloche Punkte zusammenzufassen.
+Generel geht es um ein Redisign eines Messgerates Type QuickTocUV.</p>
+<p>In Ramen dieser Project wird ein Experement durchgefuhrt deren Ziel ist einfurung RFC-Verfahren in der Entwiecklungsprocess.</p>
+<p>Fur weitere Bearbeitung relevante Themen und Skittze.</p>
+<ul>
+<li><code>rfc-procedure</code> - Template fuer weitere Projecte und Verbeserungsvorschlage</li>
+<li><code>QuickTOCuv</code> Redisign warum machen wir das?</li>
+<li><em>Was wird erwartet</em> wenn wir fertig sind dann ... <strong>Was passiert eigentlich dann..</strong></li>
+<li><code>bug</code> Es ist nicht richtig und zielfuhrend Die Bearbeitung von Bugs weiter so machen wir es actuelle bei uns uber Jira und mehrere Zwischenstellen. Ein direktes leicht nachfolziebares Ablauf ware hier notwendig BUG -&gt; Ticket -&gt; Git PullRequest -&gt; Get Merge -&gt; Release.In ideal Fall automatesiert.</li>
+<li>Die <em>BUG's</em> mussen sofort beseitigt werden.Immer grosseres Prioritat von neuen Features.</li>
+</ul>
+<a class="header" href="#zusammenfassung-1" id="zusammenfassung-1"><h1>Zusammenfassung</h1></a>
+<blockquote>
+<p>Diese Document befindet noch in Entwicklung.
+<a href="rfc.md#summary.html">RFC-Designdocument</a> .</p>
+</blockquote>
+<p>Es sind mehrere Projekte die gleichzeitig laufen.</p>
+<ul>
+<li>QuickTOCuv</li>
+<li>RFC-Process</li>
+<li>Wir mussen Vesion System anpassen</li>
+</ul>
+<a class="header" href="#a-todo" id="a-todo"><h1>☑ TODO</h1></a>
+<ul>
+<li>[X] Actuelle Stand Embedded electronic.</li>
+<li>[X] Actuelle Stand Rust</li>
+<li>[X] Skitzze technische Dokumentation.</li>
+<li>[X] Skitzze Handbuch.</li>
+<li>[X] Relevante Resourcen.</li>
+<li>[ ] RFC-Process bei LAR</li>
+<li>[ ] Monitoring Station</li>
+<li>[ ] uvtc- tc mehode fuer UV</li>
+<li>[ ] <code>can4linux</code> CAN-Open protocol driver</li>
+<li>[ ] <code>incostatic-panel-pc</code> Panel PC von Incostatic</li>
+<li>[ ] <code>dashboard</code> station Wasm daschboard</li>
+<li>[ ] <code>docker</code> containern. oder <code>kubernetes</code> eine bessere Alternative fuer uns.</li>
+<li>[ ] <code>edinburgh</code> sensor</li>
+<li>[ ] <code>aide</code> sensor</li>
+<li>[ ] Doppelmotornode3</li>
+<li>[ ] AnalogNode</li>
+<li>[ ] DigitalNode</li>
+<li>[ ] AnalogerweiterungsNode</li>
+<li>[ ] Sysinfo PC uberwachung</li>
+<li>[ ] Working Group tools <code>wg</code></li>
+<li>[ ] Techniche Dokumentation.</li>
+<li>[ ] Handbuch</li>
+<li>[ ] Project an RFC Standart angleichen</li>
+<li>[ ] Motivation, Summary vervollständigen</li>
+<li>[ ] <code>gtk-3</code> Stylen</li>
+<li>[ ] Color Theme</li>
+</ul>
+<p><input type="checkbox"/> Test Checkbox.</p>
+<a class="header" href="#contributors-eine-kopie---skitzze" id="contributors-eine-kopie---skitzze"><h1>Contributors (Eine Kopie - Skitzze)</h1></a>
+<p>Here is a list of the contributors who have helped improving mdBook. Big
+shout-out to them!</p>
+<p>If you feel you're missing from this list, feel free to add yourself in a PR.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="mermaid.min.js"></script>
+        
+        <script type="text/javascript" src="mermaid-init.js"></script>
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

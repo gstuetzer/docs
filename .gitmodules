@@ -1,0 +1,114 @@
+[submodule "example/hts221"]
+	path = example/hts221
+	url = https://github.com/danielgallagher0/hts221.git
+[submodule "example/stm32-rs"]
+	path = example/stm32-rs
+	url = https://github.com/danielgallagher0/stm32-rs
+[submodule "docs/src/hal/embedded-hal"]
+	path = docs/src/hal/embedded-hal
+	url = https://github.com/rust-embedded/embedded-hal.git
+[submodule "docs/src/bare-metal/cortex-m-quickstart"]
+	path = docs/src/bare-metal/cortex-m-quickstart
+	url = https://github.com/rust-embedded/cortex-m-quickstart
+[submodule "docs/src/serial-port/serial-rs"]
+	path = docs/src/serial-port/serial-rs
+	url = https://github.com/dcuddeback/serial-rs
+[submodule "src/embedded-engineering"]
+	path = src/embedded-engineering
+	url = https://github.com/smolkov/embedded-engineering.git
+[submodule "docs/src/fieldbus/tokio-modbus"]
+	path = docs/src/fieldbus/tokio-modbus
+	url = https://github.com/slowtec/tokio-modbus.git
+[submodule "docs/src/rfc/fmt-rfcs"]
+	path = docs/src/rfc/fmt-rfcs
+	url = https://github.com/rust-lang-nursery/fmt-rfcs.git
+[submodule "docs/src/serial/rs485-rs"]
+	path = docs/src/serial/rs485-rs
+	url = https://github.com/mbr/rs485-rs.git
+[submodule "docs/src/drivers/sensors/lm75-rs"]
+	path = docs/src/drivers/sensors/lm75-rs
+	url = https://github.com/eldruin/lm75-rs.git
+[submodule "docs/src/drivers/sensors/veml6075-rs"]
+	path = docs/src/drivers/sensors/veml6075-rs
+	url = https://github.com/eldruin/veml6075-rs.git
+[submodule "docs/src/drivers/herkulex_driver"]
+	path = docs/src/drivers/herkulex_driver
+	url = https://github.com/gbip/herkulex_driver.git
+[submodule "docs/src/drivers/sensors/veml6070-rs"]
+	path = docs/src/drivers/sensors/veml6070-rs
+	url = https://github.com/eldruin/veml6070-rs.git
+[submodule "docs/src/drivers/stm32-blue-pill-rust"]
+	path = docs/src/drivers/stm32-blue-pill-rust
+	url = https://github.com/lupyuen/stm32-blue-pill-rust.git
+[submodule "docs/src/drivers/sensors/pcf857x-rs"]
+	path = docs/src/drivers/sensors/pcf857x-rs
+	url = https://github.com/eldruin/pcf857x-rs.git
+[submodule "docs/src/drivers/sensors/nrf24l01"]
+	path = docs/src/drivers/sensors/nrf24l01
+	url = https://github.com/maikelwever/nrf24l01.git
+[submodule "docs/src/drivers/eeprom24x-rs"]
+	path = docs/src/drivers/eeprom24x-rs
+	url = https://github.com/eldruin/eeprom24x-rs.git
+[submodule "docs/src/drivers/max7219"]
+	path = docs/src/drivers/max7219
+	url = https://github.com/maikelwever/max7219.git
+[submodule "docs/src/drivers/motor-driver"]
+	path = docs/src/drivers/motor-driver
+	url = https://github.com/japaric/motor-driver.git
+[submodule "docs/src/drivers/sensors/si7021"]
+	path = docs/src/drivers/sensors/si7021
+	url = https://github.com/wose/si7021.git
+[submodule "docs/src/drivers/sensors/sensor-hal"]
+	path = docs/src/drivers/sensors/sensor-hal
+	url = https://github.com/wose/sensor-hal.git
+[submodule "docs/src/drivers/w5500"]
+	path = docs/src/drivers/w5500
+	url = https://github.com/kellerkindt/w5500.git
+[submodule "docs/src/drivers/sensors/bme680"]
+	path = docs/src/drivers/sensors/bme680
+	url = https://github.com/marcelbuesing/bme680.git
+[submodule "docs/src/drivers/onewire"]
+	path = docs/src/drivers/onewire
+	url = https://github.com/kellerkindt/onewire.git
+[submodule "docs/src/drivers/sensors/onewire"]
+	path = docs/src/drivers/sensors/onewire
+	url = https://github.com/kellerkindt/onewire.git
+[submodule "docs/src/drivers/sensors/hc-sr04"]
+	path = docs/src/drivers/sensors/hc-sr04
+	url = https://github.com/nordmoen/hc-sr04.git
+[submodule "docs/src/drivers/stellaris-launchpad"]
+	path = docs/src/drivers/stellaris-launchpad
+	url = https://github.com/thejpster/stellaris-launchpad.git
+[submodule "docs.rs"]
+	path = docs.rs
+	url = https://github.com/onur/docs.rs.git
+[submodule "docs/src/industrial-automatic/tokio-modbus"]
+	path = docs/src/industrial-automatic/tokio-modbus
+	url = https://github.com/ocschwar/tokio-modbus.git
+[submodule "docs/rust-cookbook"]
+	path = docs/rust-cookbook
+	url = https://github.com/rust-lang-nursery/rust-cookbook.git
+[submodule "docs/src/boards/nucleo-f042k6"]
+	path = docs/src/boards/nucleo-f042k6
+	url = https://github.com/therealprof/nucleo-f042k6.git
+[submodule "docs/src/boards/nucleo-f103rb"]
+	path = docs/src/boards/nucleo-f103rb
+	url = https://github.com/therealprof/nucleo-f103rb.git
+[submodule "docs/src/boards/stm32f429i-disc"]
+	path = docs/src/boards/stm32f429i-disc
+	url = https://github.com/therealprof/stm32f429i-disc.git
+[submodule "docs/src/boards/stm32f407g-disc"]
+	path = docs/src/boards/stm32f407g-disc
+	url = https://github.com/therealprof/stm32f407g-disc
+[submodule "docs/src/boards/stm32f103xx-hal"]
+	path = docs/src/boards/stm32f103xx-hal
+	url = https://github.com/japaric/stm32f103xx-hal.git
+[submodule "wg/tools/bh2018"]
+	path = wg/tools/bh2018
+	url = https://github.com/sit-fyi/bh2018.git
+[submodule "docs/macro_railroad"]
+	path = docs/macro_railroad
+	url = https://github.com/lukaslueg/macro_railroad.git
+[submodule "docs/firefox-data-docs"]
+	path = docs/firefox-data-docs
+	url = https://github.com/mozilla/firefox-data-docs.git
