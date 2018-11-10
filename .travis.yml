@@ -36,14 +36,11 @@ matrix:
     - name: Book
       rust: nightly
       before_script:
-      - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
+      # - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
       - (test -x $HOME/.cargo/bin/mdbook-mosta || cargo install --git https://github.com/asmolkov/mdbook-mosta)
-      - 
-      - cargo build --release
       
       script:
-      - cp target/release/mdbook-mosta docs/
-      - (cd docs && mdbook-mosta build)
+      - (cd docs && $HOME/.cargo/bin/mdbook-mosta build)
       deploy:
         provider: pages
         skip-cleanup: true
