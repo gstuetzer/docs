@@ -8,7 +8,7 @@
   <!-- [![OpenCollective Backers][backers-image]](#backers) -->
   <!-- [![OpenCollective Sponsors][sponsors-image]](#sponsors) -->
 
-# `RFC-Process`,`QuickTOCuv`
+# `RFC-Process`,`QuickTOCuv` Projekt Dokumentation.
 
 *RFC Procedure*
 [Was ist RFC?](rfc.md)

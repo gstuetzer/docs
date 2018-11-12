@@ -22,7 +22,7 @@ requests can be posted on the [GitHub issue tracker](https://github.com/rust-lan
 
 ```mermaid
 graph TD;
-    A-->B;
+    Calibration-->Measurement;
     A-->C;
     B-->D;
     C-->D;
@@ -30,21 +30,21 @@ graph TD;
 
 ```mermaid
 gantt
-    title A Gantt Diagram
+    title UV-2.0
     dateFormat  YYYY-MM-DD
-    section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
-    section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    section Steurung
+    Hardware           :a1, 2018-12-11, 30d
+    TC-messung         :after a1  , 20d
+    section Benutzeroberflache
+    Framework          : 2019-01-02  , 12d
+    Web                : 24d
 ```
 
 
 ```mermaid
 gantt
         dateFormat  YYYY-MM-DD
-        title Adding GANTT diagram functionality to mermaid
+        title Examplr GANTT diagram functionality to mermaid
         section A section
         Completed task            :done,    des1, 2014-01-06,2014-01-08
         Active task               :active,  des2, 2014-01-09, 3d
