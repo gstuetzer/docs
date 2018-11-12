@@ -19,22 +19,31 @@ requests can be posted on the [GitHub issue tracker](https://github.com/rust-lan
 
 * [Hardware binding]()
 * [Analyzers library]()
-
+<!-- 
 ```mermaid
 graph TD;
-    Calibration-->Measurement;
-    A-->C;
-    B-->D;
-    C-->D;
+    Calibration->Measurement
+    A->C;
+    B->D;
+    C->D;
 ```
+-->
 
 ```mermaid
 gantt
     title UV-2.0
     dateFormat  YYYY-MM-DD
+    section Research
+    Embedded           :2018-
+    Language
+    Hardware 
+    OS 
     section Steurung
-    Hardware           :a1, 2018-12-11, 30d
-    TC-messung         :after a1  , 20d
+    Hardware binding   :a1, 2018-11-15, 15d
+    TC-messung         :a2 after a1  , 10d
+    WebAssembly        :after a2  , 5d
+    TC-settings        :a3 after a2  , 10d
+    OS                 :a4 after a3  , 15d
     section Benutzeroberflache
     Framework          : 2019-01-02  , 12d
     Web                : 24d
@@ -72,12 +81,15 @@ overview.
 [Rust Documentation](https://www.rust-lang.org/en-US/documentation.html)
 Learn more - Rust interesting books and Projects.
 
-- [Edition 2018](https://rust-lang-nursery.github.io/edition-guide/)
-- [Cargo](https://doc.rust-lang.org/cargo/index.html) package manager.
-- [Konfigurierungssystem basiert auf TOML](https://docs.rs/toml/0.4.8/toml/)
-- [Cryptographic algorithms written in pure Rust](https://github.com/RustCrypto)
-- [Operating System Development in Rust](https://github.com/rust-osdev)
-- [Rust Embedded books](https://rust-embedded.github.io/bookshelf/)
+* [Edition 2018](https://rust-lang-nursery.github.io/edition-guide/)
+* [Rustc guide](https://rust-lang-nursery.github.io/rustc-guide/)
+* [Reference](https://doc.rust-lang.org/nightly/reference/)
+* [Grammar](https://doc.rust-lang.org/nightly/grammar.html)
+* [Cargo](https://doc.rust-lang.org/cargo/index.html) package manager.
+* [Konfigurierungssystem basiert auf TOML](https://docs.rs/toml/0.4.8/toml/)
+* [Cryptographic algorithms written in pure Rust](https://github.com/RustCrypto)
+* [Operating System Development in Rust](https://github.com/rust-osdev)
+* [Rust Embedded books](https://rust-embedded.github.io/bookshelf/)
 
 ## Extra
 

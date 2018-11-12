@@ -12,7 +12,7 @@ Entwiecklung tools Programmer, Debug & Test
 
 ## Boards
 
-- [NUCLEO-F042K6](nucleo-f042k6.md)
-- [NUCLEO-F103rb](nucleo-f103rb.md)
-- [NUCLEO-F446RE](nucleo-f446re.md)
-    -[STM32F446RE](stm32f446re.md)
+- [<i class="fas fa-microchip"></i>NUCLEO-F042K6](nucleo-f042k6.md)
+- [<i class="fas fa-microchip"></i>NUCLEO-F103rb](nucleo-f103rb.md)
+- [<i class="fas fa-microchip"></i>NUCLEO-F446RE](nucleo-f446re.md)
+    -[<i class="fas fa-microchip"></i>STM32F446RE](stm32f446re.md)

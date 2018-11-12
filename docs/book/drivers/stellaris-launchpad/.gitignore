@@ -1,9 +1,0 @@
-*.swp
-*.elf
-*.hex
-*.o
-*.bk
-target
-Cargo.lock
-*.sublime-workspace
-
