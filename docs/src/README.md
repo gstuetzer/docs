@@ -19,37 +19,29 @@ requests can be posted on the [GitHub issue tracker](https://github.com/rust-lan
 
 * [Hardware binding]()
 * [Analyzers library]()
-<!-- 
-```mermaid
-graph TD;
-    Calibration->Measurement
-    A->C;
-    B->D;
-    C->D;
-```
--->
 
 ```mermaid
 gantt
     title UV-2.0
     dateFormat  YYYY-MM-DD
-    section Research
-    Embedded           :2018-
-    Language
-    Hardware 
-    OS 
-    section Steurung
-    Hardware binding   :a1, 2018-11-15, 15d
-    TC-messung         :a2 after a1  , 10d
-    WebAssembly        :after a2  , 5d
-    TC-settings        :a3 after a2  , 10d
-    OS                 :a4 after a3  , 15d
-    section Benutzeroberflache
-    Framework          : 2019-01-02  , 12d
-    Web                : 24d
+    section Planung
+    Embedded und Hardware:2018-09-01, 130d
+    Rust,js,python:2018-09-01,130d
+    Hardware:2018-10-15,60d
+    OS,Repository:,30d
+    CI-Continuous integration:2018-11-01, 60d
+    CD-Continuous delivery:, 60d
+    Dokumentation:2018-10-01, 70d
+    section Simulation
+    HAL:2018-09-15,100d
+    TC-Only:a2 after a1, 25d
+    Sensor:2018-10-20, 35d
+    section GUI
+    Web dashboard:, 30d
+    Embedded UI:, 30d
 ```
 
-
+<!-- 
 ```mermaid
 gantt
         dateFormat  YYYY-MM-DD
@@ -67,7 +59,7 @@ gantt
         Create tests for renderer           :2d
         Add to mermaid                      :1d
 
-```
+``` -->
 
 ## API docs
 

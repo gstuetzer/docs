@@ -22,7 +22,3 @@ $ xdg-open ./book/index.html # linux
 $ start .\book\index.html    # windows
 $ open ./book/index.html     # mac
 ```
-
-## Contributing oder auf Deutsch (Mitwirken)
-
-☑TODO:`Wie kann man hier mitwierken?`
