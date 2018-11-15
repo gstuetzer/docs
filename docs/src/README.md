@@ -35,10 +35,13 @@ gantt
     section Simulation
     HAL:2018-09-15,100d
     TC-Only:a2 after a1, 25d
-    Sensor:2018-10-20, 35d
+    Sensors:2018-10-20, 45d
     section GUI
     Web dashboard:, 30d
     Embedded UI:, 30d
+    section Embedded Hardware experements
+    STM32F7:2018-11-12, 15d
+    STM32F4:2018-11-12, 15d
 ```
 
 <!-- 

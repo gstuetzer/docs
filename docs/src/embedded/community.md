@@ -8,3 +8,4 @@
 * [embedded-hal](https://github.com/rust-embedded/embedded-hal)
 * [SVG System View Description](https://www.keil.com/pack/doc/CMSIS/SVD/html/index.html)
 * [Andere Losung HAL problem bei Rust](https://github.com/thenewwazoo)
+* [MikroBit Rust](https://github.com/droogmic)
