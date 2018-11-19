@@ -1,6 +1,6 @@
-# Entwiecklungshandbuch
+# Entwicklungshandbuch
 
-**Documentation lesen kann das Leben retten**.
+**Dokumentation lesen kann das Leben retten**.
 
 Das ist eine Samlung den Informationen, die Hilfe bei der Bearbeitung diese Prozedure geben konnen.
 
